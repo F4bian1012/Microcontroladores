@@ -1,3 +1,20 @@
+Descargar el siguiente Entorno de desarrollo
+
+https://code.visualstudio.com/download
+
+Descargar las extensiones 
+- C/C++ Compile Run
+- C/C++ Extensión Pack
+
+Descargar el siguiente compilador de C
+https://sourceforge.net/projects/mingw/
+
+
+Editar varialbes de entorno
+Agregar
+C:\MinGW\bin
+
+
 Se sugiere revisar el siguiente material
 
 https://www.w3schools.com/c/index.php
