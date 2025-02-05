@@ -12,15 +12,17 @@ int main() {
 
     // Inicia el ciclo while
     // La condición es que el contador sea menor que 5
-    while (counter < 5) {
+    while (counter < 10) {
         // Imprime el valor actual del contador
         printf("Counter: %d\n", counter);
 
         // Incrementa el contador en 1
         counter++;
     }
+
     counter = 0;
-    while (counter < 5) {
+    printf("Ciclo while con break \n");
+    while (counter < 10) {
         if (counter == 3) {
             break;
         }
@@ -28,7 +30,8 @@ int main() {
         counter++;
     }
     counter = 0;
-    while (counter < 5) {
+    printf("Ciclo while con continue \n");
+    while (counter < 10) {
         if (counter == 3) {
             counter++;
             continue;
