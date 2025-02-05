@@ -10,5 +10,6 @@ int main() {
     printf("%d\n", myNum);
     printf("%f\n", myFloatNum);
     printf("%c\n", myLetter);
+    system("pause");
     return 0;
 }
