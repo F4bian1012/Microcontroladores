@@ -131,28 +131,6 @@
 <VisibleNodeIds>
 <v>Input_Pin</v>
 <v>Input_Pin\Input_Pin</v>
-<v>Input_Pin\Input_Pin\CortexM3</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\BOTON.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Input_Pin.elf</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Input_Pin.hex</v>
-<v>Input_Pin\Input_Pin\CortexM3\ARM_GCC_541\Debug\Input_Pin.map</v>
-<v>Input_Pin\Input_Pin\Input_Pin.gpdsc</v>
 <v>Input_Pin\Input_Pin\Input_Pin.rpt</v>
 <v>Input_Pin\Input_Pin\Input_Pin_timing.html</v>
 </VisibleNodeIds>
@@ -172,6 +150,11 @@
 <v>Input_Pin\Input_Pin\System Reference Guides\cy_boot_v6_0</v>
 <v>Input_Pin\Input_Pin\cy_pins_v2_20</v>
 <v>Input_Pin\Input_Pin\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Input_Pin\Input_Pin\Gnd_v1_0</v>
+<v>Input_Pin\Input_Pin\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\LED_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\Resistor_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\SwitchSPST_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Input_Pin</v>
@@ -182,6 +165,11 @@
 <v>Input_Pin\Input_Pin\System Reference Guides\cy_boot_v6_0</v>
 <v>Input_Pin\Input_Pin\cy_pins_v2_20</v>
 <v>Input_Pin\Input_Pin\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Input_Pin\Input_Pin\Gnd_v1_0</v>
+<v>Input_Pin\Input_Pin\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\LED_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\Resistor_v1_0.pdf</v>
+<v>Input_Pin\Input_Pin\SwitchSPST_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -201,7 +189,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1749, 904" SelectedTabbedMdiWindow="f7bb5011-35d2-47a0-93bd-cf9ad2027032"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\TopDesign\TopDesign.cysch" Guid="f7bb5011-35d2-47a0-93bd-cf9ad2027032" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\Input_Pin.cydwr" Guid="e63edb9b-e223-4019-a13d-395d4c1ab477" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\main.c" Guid="91b6b19a-d87b-4f78-9959-b5b95c6aadf9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1980, 904" SelectedTabbedMdiWindow="91b6b19a-d87b-4f78-9959-b5b95c6aadf9"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\TopDesign\TopDesign.cysch" Guid="f7bb5011-35d2-47a0-93bd-cf9ad2027032" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\Input_Pin.cydwr" Guid="e63edb9b-e223-4019-a13d-395d4c1ab477" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\main.c" Guid="91b6b19a-d87b-4f78-9959-b5b95c6aadf9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

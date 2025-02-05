@@ -2,7 +2,7 @@
 --	Conversion of Input_Pin.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Feb 05 12:44:03 2025
+--	Wed Feb 05 15:25:48 2025
 --
 
 USE cypress.cypress.all;
@@ -24,8 +24,11 @@ SIGNAL tmpOE__LED_net_0 : bit;
 SIGNAL tmpFB_0__LED_net_0 : bit;
 SIGNAL tmpIO_0__LED_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_net_0 : bit;
-TERMINAL Net_19 : bit;
+TERMINAL Net_31 : bit;
 SIGNAL tmpINTERRUPT_0__LED_net_0 : bit;
+TERMINAL Net_23 : bit;
+TERMINAL Net_28 : bit;
+TERMINAL Net_30 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -164,7 +167,7 @@ LED:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__LED_net_0),
 		siovref=>(tmpSIOVREF__LED_net_0),
-		annotation=>Net_19,
+		annotation=>Net_31,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__BOTON_net_0,
 		in_reset=>zero,
@@ -172,5 +175,30 @@ LED:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__BOTON_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_net_0);
+SW_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_23, Net_20));
+GND_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_23);
+D_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"LED_v1_0",
+		port_names=>"A, K",
+		width=>2)
+	PORT MAP(connect=>(Net_28, Net_30));
+GND_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_30);
+R_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_31, Net_28));
 
 END R_T_L;

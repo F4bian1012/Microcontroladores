@@ -1,6 +1,6 @@
 // ======================================================================
 // Input_Pin.v generated from TopDesign.cysch
-// 02/05/2025 at 12:44
+// 02/05/2025 at 15:25
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -147,8 +147,11 @@
 // top
 module top ;
 
-    electrical  Net_19;
     electrical  Net_20;
+    electrical  Net_31;
+    electrical  Net_28;
+    electrical  Net_30;
+    electrical  Net_23;
 
 	wire [0:0] tmpOE__BOTON_net;
 	wire [0:0] tmpFB_0__BOTON_net;
@@ -292,7 +295,7 @@ module top ;
 		  .io({tmpIO_0__LED_net[0:0]}),
 		  .siovref(tmpSIOVREF__LED_net),
 		  .interrupt({tmpINTERRUPT_0__LED_net[0:0]}),
-		  .annotation({Net_19}),
+		  .annotation({Net_31}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -301,6 +304,54 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__LED_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+    cy_annotation_universal_v1_0 SW_1 (
+        .connect({
+            Net_23,
+            Net_20
+        })
+    );
+    defparam SW_1.comp_name = "SwitchSPST_v1_0";
+    defparam SW_1.port_names = "T1, T2";
+    defparam SW_1.width = 2;
+
+    cy_annotation_universal_v1_0 GND_1 (
+        .connect({
+            Net_23
+        })
+    );
+    defparam GND_1.comp_name = "Gnd_v1_0";
+    defparam GND_1.port_names = "T1";
+    defparam GND_1.width = 1;
+
+    cy_annotation_universal_v1_0 D_1 (
+        .connect({
+            Net_28,
+            Net_30
+        })
+    );
+    defparam D_1.comp_name = "LED_v1_0";
+    defparam D_1.port_names = "A, K";
+    defparam D_1.width = 2;
+
+    cy_annotation_universal_v1_0 GND_2 (
+        .connect({
+            Net_30
+        })
+    );
+    defparam GND_2.comp_name = "Gnd_v1_0";
+    defparam GND_2.port_names = "T1";
+    defparam GND_2.width = 1;
+
+    cy_annotation_universal_v1_0 R_1 (
+        .connect({
+            Net_31,
+            Net_28
+        })
+    );
+    defparam R_1.comp_name = "Resistor_v1_0";
+    defparam R_1.port_names = "T1, T2";
+    defparam R_1.width = 2;
 
 
 
