@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ed979cf5-9929-478b-a99e-7700632a1b82
+C:\Users\Fabian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|038c3db9-3a98-446e-8daa-fc3682c5b8a4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5a9e424e-0367-43ee-8090-6e8933bbd990
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7e826aab-6f66-4043-aa25-e8f45c22bcf4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cc7f6cf8-5deb-4db3-b9e2-c414a8aa565a
+C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\Blinking_LED.cyprj|2a32332f-e971-4428-8b4a-36795826142b

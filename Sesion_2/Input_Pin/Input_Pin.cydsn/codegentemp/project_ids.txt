@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|addcab5d-107d-4c52-b7cb-bef1fa485f62
+C:\Users\Fabian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|f0309cc7-33a0-4eb1-bbbf-65067cae478e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2ae9bf82-390e-4954-a20d-aff35bca8a38
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2296951d-d4b6-4cf5-98c9-77b3631e7589
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|acfe28e7-d3ac-433d-a290-2825182698ee
+C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Input_Pin\Input_Pin.cydsn\Input_Pin.cyprj|2418b466-f427-4ec2-9840-a873d3d75206
