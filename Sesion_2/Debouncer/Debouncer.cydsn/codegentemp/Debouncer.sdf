@@ -1,0 +1,24 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2025-02-06T16:44:04Z")
+ (DESIGN "Debouncer")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.4")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Debouncer")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb isr_1.clock (0.000:0.000:0.000))
+    (INTERCONNECT BOTON\(0\).fb Net_19.main_0 (4.657:4.657:4.657))
+    (INTERCONNECT Net_19.q isr_1.interrupt (7.076:7.076:7.076))
+    (INTERCONNECT ClockBlock.dclk_glb_0 Net_19.clock_0 (0.000:0.000:0.000))
+    (INTERCONNECT BOTON\(0\)_PAD BOTON\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED\(0\)_PAD LED\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

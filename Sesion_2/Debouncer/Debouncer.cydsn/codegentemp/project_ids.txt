@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|06a63d0c-a366-418c-8fe8-e13ee796d8ad
+C:\Users\Fabian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7e510818-b125-4afc-867a-aefa0edec816
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2fa54ff6-735e-4136-8885-4f40258b624b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3fdb365b-f68d-4838-9c6c-83843601834d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cf7439ac-acb1-489a-bc10-a4f4dfc950c1
+C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Debouncer\Debouncer.cydsn\Debouncer.cyprj|88dc27d7-2c56-4bd7-8d59-fe9d29e34276
