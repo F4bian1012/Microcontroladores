@@ -1,0 +1,504 @@
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int contador;
+  15:main.c        **** int main(void)
+  16:main.c        **** {
+  28              		.loc 1 16 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  17:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  34              		.loc 1 17 0
+  35              		.syntax unified
+  36              	@ 17 "main.c" 1
+  37 0000 62B6     		CPSIE   i
+  38              	@ 0 "" 2
+  18:main.c        ****     contador=0;
+  39              		.loc 1 18 0
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 2
+
+
+  40              		.thumb
+  41              		.syntax unified
+  42 0002 0022     		movs	r2, #0
+  43 0004 054B     		ldr	r3, .L4
+  44 0006 1A60     		str	r2, [r3]
+  45              	.L2:
+  19:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  20:main.c        **** 
+  21:main.c        ****     for(;;)
+  22:main.c        ****     {
+  23:main.c        ****         contador++;
+  46              		.loc 1 23 0
+  47 0008 044A     		ldr	r2, .L4
+  48 000a 1368     		ldr	r3, [r2]
+  49 000c 0133     		adds	r3, r3, #1
+  50 000e 1360     		str	r3, [r2]
+  24:main.c        ****         if  (contador==8)
+  51              		.loc 1 24 0
+  52 0010 082B     		cmp	r3, #8
+  53 0012 F9D1     		bne	.L2
+  25:main.c        ****         {
+  26:main.c        ****             contador=0;
+  54              		.loc 1 26 0
+  55 0014 0022     		movs	r2, #0
+  56 0016 014B     		ldr	r3, .L4
+  57 0018 1A60     		str	r2, [r3]
+  58 001a F5E7     		b	.L2
+  59              	.L5:
+  60              		.align	2
+  61              	.L4:
+  62 001c 00000000 		.word	contador
+  63              		.cfi_endproc
+  64              	.LFE63:
+  65              		.size	main, .-main
+  66              		.comm	contador,4,4
+  67              		.text
+  68              	.Letext0:
+  69              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  70              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  71              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+  72              		.section	.debug_info,"",%progbits
+  73              	.Ldebug_info0:
+  74 0000 D8000000 		.4byte	0xd8
+  75 0004 0400     		.2byte	0x4
+  76 0006 00000000 		.4byte	.Ldebug_abbrev0
+  77 000a 04       		.byte	0x4
+  78 000b 01       		.uleb128 0x1
+  79 000c 43000000 		.4byte	.LASF18
+  80 0010 0C       		.byte	0xc
+  81 0011 2E000000 		.4byte	.LASF19
+  82 0015 16010000 		.4byte	.LASF20
+  83 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  84 001d 00000000 		.4byte	0
+  85 0021 00000000 		.4byte	.Ldebug_line0
+  86 0025 02       		.uleb128 0x2
+  87 0026 01       		.byte	0x1
+  88 0027 06       		.byte	0x6
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 3
+
+
+  89 0028 C8010000 		.4byte	.LASF0
+  90 002c 02       		.uleb128 0x2
+  91 002d 01       		.byte	0x1
+  92 002e 08       		.byte	0x8
+  93 002f FA000000 		.4byte	.LASF1
+  94 0033 02       		.uleb128 0x2
+  95 0034 02       		.byte	0x2
+  96 0035 05       		.byte	0x5
+  97 0036 F0010000 		.4byte	.LASF2
+  98 003a 02       		.uleb128 0x2
+  99 003b 02       		.byte	0x2
+ 100 003c 07       		.byte	0x7
+ 101 003d 0E000000 		.4byte	.LASF3
+ 102 0041 03       		.uleb128 0x3
+ 103 0042 E0010000 		.4byte	.LASF9
+ 104 0046 02       		.byte	0x2
+ 105 0047 3F       		.byte	0x3f
+ 106 0048 4C000000 		.4byte	0x4c
+ 107 004c 02       		.uleb128 0x2
+ 108 004d 04       		.byte	0x4
+ 109 004e 05       		.byte	0x5
+ 110 004f 0D010000 		.4byte	.LASF4
+ 111 0053 02       		.uleb128 0x2
+ 112 0054 04       		.byte	0x4
+ 113 0055 07       		.byte	0x7
+ 114 0056 D1000000 		.4byte	.LASF5
+ 115 005a 02       		.uleb128 0x2
+ 116 005b 08       		.byte	0x8
+ 117 005c 05       		.byte	0x5
+ 118 005d 00000000 		.4byte	.LASF6
+ 119 0061 02       		.uleb128 0x2
+ 120 0062 08       		.byte	0x8
+ 121 0063 07       		.byte	0x7
+ 122 0064 E3000000 		.4byte	.LASF7
+ 123 0068 04       		.uleb128 0x4
+ 124 0069 04       		.byte	0x4
+ 125 006a 05       		.byte	0x5
+ 126 006b 696E7400 		.ascii	"int\000"
+ 127 006f 02       		.uleb128 0x2
+ 128 0070 04       		.byte	0x4
+ 129 0071 07       		.byte	0x7
+ 130 0072 21000000 		.4byte	.LASF8
+ 131 0076 03       		.uleb128 0x3
+ 132 0077 FA010000 		.4byte	.LASF10
+ 133 007b 03       		.byte	0x3
+ 134 007c 2C       		.byte	0x2c
+ 135 007d 41000000 		.4byte	0x41
+ 136 0081 02       		.uleb128 0x2
+ 137 0082 04       		.byte	0x4
+ 138 0083 04       		.byte	0x4
+ 139 0084 EA010000 		.4byte	.LASF11
+ 140 0088 02       		.uleb128 0x2
+ 141 0089 08       		.byte	0x8
+ 142 008a 04       		.byte	0x4
+ 143 008b B4010000 		.4byte	.LASF12
+ 144 008f 02       		.uleb128 0x2
+ 145 0090 01       		.byte	0x1
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 4
+
+
+ 146 0091 08       		.byte	0x8
+ 147 0092 08010000 		.4byte	.LASF13
+ 148 0096 02       		.uleb128 0x2
+ 149 0097 04       		.byte	0x4
+ 150 0098 07       		.byte	0x7
+ 151 0099 02020000 		.4byte	.LASF14
+ 152 009d 02       		.uleb128 0x2
+ 153 009e 08       		.byte	0x8
+ 154 009f 04       		.byte	0x4
+ 155 00a0 D4010000 		.4byte	.LASF15
+ 156 00a4 05       		.uleb128 0x5
+ 157 00a5 35000000 		.4byte	.LASF21
+ 158 00a9 01       		.byte	0x1
+ 159 00aa 0F       		.byte	0xf
+ 160 00ab 68000000 		.4byte	0x68
+ 161 00af 00000000 		.4byte	.LFB63
+ 162 00b3 20000000 		.4byte	.LFE63-.LFB63
+ 163 00b7 01       		.uleb128 0x1
+ 164 00b8 9C       		.byte	0x9c
+ 165 00b9 06       		.uleb128 0x6
+ 166 00ba BB010000 		.4byte	.LASF16
+ 167 00be 04       		.byte	0x4
+ 168 00bf 1207     		.2byte	0x712
+ 169 00c1 C5000000 		.4byte	0xc5
+ 170 00c5 07       		.uleb128 0x7
+ 171 00c6 76000000 		.4byte	0x76
+ 172 00ca 08       		.uleb128 0x8
+ 173 00cb 3A000000 		.4byte	.LASF17
+ 174 00cf 01       		.byte	0x1
+ 175 00d0 0E       		.byte	0xe
+ 176 00d1 68000000 		.4byte	0x68
+ 177 00d5 05       		.uleb128 0x5
+ 178 00d6 03       		.byte	0x3
+ 179 00d7 00000000 		.4byte	contador
+ 180 00db 00       		.byte	0
+ 181              		.section	.debug_abbrev,"",%progbits
+ 182              	.Ldebug_abbrev0:
+ 183 0000 01       		.uleb128 0x1
+ 184 0001 11       		.uleb128 0x11
+ 185 0002 01       		.byte	0x1
+ 186 0003 25       		.uleb128 0x25
+ 187 0004 0E       		.uleb128 0xe
+ 188 0005 13       		.uleb128 0x13
+ 189 0006 0B       		.uleb128 0xb
+ 190 0007 03       		.uleb128 0x3
+ 191 0008 0E       		.uleb128 0xe
+ 192 0009 1B       		.uleb128 0x1b
+ 193 000a 0E       		.uleb128 0xe
+ 194 000b 55       		.uleb128 0x55
+ 195 000c 17       		.uleb128 0x17
+ 196 000d 11       		.uleb128 0x11
+ 197 000e 01       		.uleb128 0x1
+ 198 000f 10       		.uleb128 0x10
+ 199 0010 17       		.uleb128 0x17
+ 200 0011 00       		.byte	0
+ 201 0012 00       		.byte	0
+ 202 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 5
+
+
+ 203 0014 24       		.uleb128 0x24
+ 204 0015 00       		.byte	0
+ 205 0016 0B       		.uleb128 0xb
+ 206 0017 0B       		.uleb128 0xb
+ 207 0018 3E       		.uleb128 0x3e
+ 208 0019 0B       		.uleb128 0xb
+ 209 001a 03       		.uleb128 0x3
+ 210 001b 0E       		.uleb128 0xe
+ 211 001c 00       		.byte	0
+ 212 001d 00       		.byte	0
+ 213 001e 03       		.uleb128 0x3
+ 214 001f 16       		.uleb128 0x16
+ 215 0020 00       		.byte	0
+ 216 0021 03       		.uleb128 0x3
+ 217 0022 0E       		.uleb128 0xe
+ 218 0023 3A       		.uleb128 0x3a
+ 219 0024 0B       		.uleb128 0xb
+ 220 0025 3B       		.uleb128 0x3b
+ 221 0026 0B       		.uleb128 0xb
+ 222 0027 49       		.uleb128 0x49
+ 223 0028 13       		.uleb128 0x13
+ 224 0029 00       		.byte	0
+ 225 002a 00       		.byte	0
+ 226 002b 04       		.uleb128 0x4
+ 227 002c 24       		.uleb128 0x24
+ 228 002d 00       		.byte	0
+ 229 002e 0B       		.uleb128 0xb
+ 230 002f 0B       		.uleb128 0xb
+ 231 0030 3E       		.uleb128 0x3e
+ 232 0031 0B       		.uleb128 0xb
+ 233 0032 03       		.uleb128 0x3
+ 234 0033 08       		.uleb128 0x8
+ 235 0034 00       		.byte	0
+ 236 0035 00       		.byte	0
+ 237 0036 05       		.uleb128 0x5
+ 238 0037 2E       		.uleb128 0x2e
+ 239 0038 00       		.byte	0
+ 240 0039 3F       		.uleb128 0x3f
+ 241 003a 19       		.uleb128 0x19
+ 242 003b 03       		.uleb128 0x3
+ 243 003c 0E       		.uleb128 0xe
+ 244 003d 3A       		.uleb128 0x3a
+ 245 003e 0B       		.uleb128 0xb
+ 246 003f 3B       		.uleb128 0x3b
+ 247 0040 0B       		.uleb128 0xb
+ 248 0041 27       		.uleb128 0x27
+ 249 0042 19       		.uleb128 0x19
+ 250 0043 49       		.uleb128 0x49
+ 251 0044 13       		.uleb128 0x13
+ 252 0045 8701     		.uleb128 0x87
+ 253 0047 19       		.uleb128 0x19
+ 254 0048 11       		.uleb128 0x11
+ 255 0049 01       		.uleb128 0x1
+ 256 004a 12       		.uleb128 0x12
+ 257 004b 06       		.uleb128 0x6
+ 258 004c 40       		.uleb128 0x40
+ 259 004d 18       		.uleb128 0x18
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 6
+
+
+ 260 004e 9742     		.uleb128 0x2117
+ 261 0050 19       		.uleb128 0x19
+ 262 0051 00       		.byte	0
+ 263 0052 00       		.byte	0
+ 264 0053 06       		.uleb128 0x6
+ 265 0054 34       		.uleb128 0x34
+ 266 0055 00       		.byte	0
+ 267 0056 03       		.uleb128 0x3
+ 268 0057 0E       		.uleb128 0xe
+ 269 0058 3A       		.uleb128 0x3a
+ 270 0059 0B       		.uleb128 0xb
+ 271 005a 3B       		.uleb128 0x3b
+ 272 005b 05       		.uleb128 0x5
+ 273 005c 49       		.uleb128 0x49
+ 274 005d 13       		.uleb128 0x13
+ 275 005e 3F       		.uleb128 0x3f
+ 276 005f 19       		.uleb128 0x19
+ 277 0060 3C       		.uleb128 0x3c
+ 278 0061 19       		.uleb128 0x19
+ 279 0062 00       		.byte	0
+ 280 0063 00       		.byte	0
+ 281 0064 07       		.uleb128 0x7
+ 282 0065 35       		.uleb128 0x35
+ 283 0066 00       		.byte	0
+ 284 0067 49       		.uleb128 0x49
+ 285 0068 13       		.uleb128 0x13
+ 286 0069 00       		.byte	0
+ 287 006a 00       		.byte	0
+ 288 006b 08       		.uleb128 0x8
+ 289 006c 34       		.uleb128 0x34
+ 290 006d 00       		.byte	0
+ 291 006e 03       		.uleb128 0x3
+ 292 006f 0E       		.uleb128 0xe
+ 293 0070 3A       		.uleb128 0x3a
+ 294 0071 0B       		.uleb128 0xb
+ 295 0072 3B       		.uleb128 0x3b
+ 296 0073 0B       		.uleb128 0xb
+ 297 0074 49       		.uleb128 0x49
+ 298 0075 13       		.uleb128 0x13
+ 299 0076 3F       		.uleb128 0x3f
+ 300 0077 19       		.uleb128 0x19
+ 301 0078 02       		.uleb128 0x2
+ 302 0079 18       		.uleb128 0x18
+ 303 007a 00       		.byte	0
+ 304 007b 00       		.byte	0
+ 305 007c 00       		.byte	0
+ 306              		.section	.debug_aranges,"",%progbits
+ 307 0000 1C000000 		.4byte	0x1c
+ 308 0004 0200     		.2byte	0x2
+ 309 0006 00000000 		.4byte	.Ldebug_info0
+ 310 000a 04       		.byte	0x4
+ 311 000b 00       		.byte	0
+ 312 000c 0000     		.2byte	0
+ 313 000e 0000     		.2byte	0
+ 314 0010 00000000 		.4byte	.LFB63
+ 315 0014 20000000 		.4byte	.LFE63-.LFB63
+ 316 0018 00000000 		.4byte	0
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 7
+
+
+ 317 001c 00000000 		.4byte	0
+ 318              		.section	.debug_ranges,"",%progbits
+ 319              	.Ldebug_ranges0:
+ 320 0000 00000000 		.4byte	.LFB63
+ 321 0004 20000000 		.4byte	.LFE63
+ 322 0008 00000000 		.4byte	0
+ 323 000c 00000000 		.4byte	0
+ 324              		.section	.debug_line,"",%progbits
+ 325              	.Ldebug_line0:
+ 326 0000 59010000 		.section	.debug_str,"MS",%progbits,1
+ 326      02003F01 
+ 326      00000201 
+ 326      FB0E0D00 
+ 326      01010101 
+ 327              	.LASF6:
+ 328 0000 6C6F6E67 		.ascii	"long long int\000"
+ 328      206C6F6E 
+ 328      6720696E 
+ 328      7400
+ 329              	.LASF3:
+ 330 000e 73686F72 		.ascii	"short unsigned int\000"
+ 330      7420756E 
+ 330      7369676E 
+ 330      65642069 
+ 330      6E7400
+ 331              	.LASF8:
+ 332 0021 756E7369 		.ascii	"unsigned int\000"
+ 332      676E6564 
+ 332      20696E74 
+ 332      00
+ 333              	.LASF19:
+ 334 002e 6D61696E 		.ascii	"main.c\000"
+ 334      2E6300
+ 335              	.LASF21:
+ 336 0035 6D61696E 		.ascii	"main\000"
+ 336      00
+ 337              	.LASF17:
+ 338 003a 636F6E74 		.ascii	"contador\000"
+ 338      61646F72 
+ 338      00
+ 339              	.LASF18:
+ 340 0043 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 340      43313120 
+ 340      352E342E 
+ 340      31203230 
+ 340      31363036 
+ 341 0076 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 341      20726576 
+ 341      6973696F 
+ 341      6E203233 
+ 341      37373135 
+ 342 00a9 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 342      66756E63 
+ 342      74696F6E 
+ 342      2D736563 
+ 342      74696F6E 
+ 343              	.LASF5:
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 8
+
+
+ 344 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 344      20756E73 
+ 344      69676E65 
+ 344      6420696E 
+ 344      7400
+ 345              	.LASF7:
+ 346 00e3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 346      206C6F6E 
+ 346      6720756E 
+ 346      7369676E 
+ 346      65642069 
+ 347              	.LASF1:
+ 348 00fa 756E7369 		.ascii	"unsigned char\000"
+ 348      676E6564 
+ 348      20636861 
+ 348      7200
+ 349              	.LASF13:
+ 350 0108 63686172 		.ascii	"char\000"
+ 350      00
+ 351              	.LASF4:
+ 352 010d 6C6F6E67 		.ascii	"long int\000"
+ 352      20696E74 
+ 352      00
+ 353              	.LASF20:
+ 354 0116 433A5C55 		.ascii	"C:\\Users\\Fabian\\OneDrive - Escuela Tecnologica I"
+ 354      73657273 
+ 354      5C466162 
+ 354      69616E5C 
+ 354      4F6E6544 
+ 355 0146 6E737469 		.ascii	"nstituto Tecnico Central\\A_Microcontroladores\\Mic"
+ 355      7475746F 
+ 355      20546563 
+ 355      6E69636F 
+ 355      2043656E 
+ 356 0177 726F636F 		.ascii	"rocontroladores\\Sesion_2\\Debugging\\Debugging\\De"
+ 356      6E74726F 
+ 356      6C61646F 
+ 356      7265735C 
+ 356      53657369 
+ 357 01a6 62756767 		.ascii	"bugging.cydsn\000"
+ 357      696E672E 
+ 357      63796473 
+ 357      6E00
+ 358              	.LASF12:
+ 359 01b4 646F7562 		.ascii	"double\000"
+ 359      6C6500
+ 360              	.LASF16:
+ 361 01bb 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 361      52784275 
+ 361      66666572 
+ 361      00
+ 362              	.LASF0:
+ 363 01c8 7369676E 		.ascii	"signed char\000"
+ 363      65642063 
+ 363      68617200 
+ 364              	.LASF15:
+ 365 01d4 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccrBuWrI.s 			page 9
+
+
+ 365      20646F75 
+ 365      626C6500 
+ 366              	.LASF9:
+ 367 01e0 5F5F696E 		.ascii	"__int32_t\000"
+ 367      7433325F 
+ 367      7400
+ 368              	.LASF11:
+ 369 01ea 666C6F61 		.ascii	"float\000"
+ 369      7400
+ 370              	.LASF2:
+ 371 01f0 73686F72 		.ascii	"short int\000"
+ 371      7420696E 
+ 371      7400
+ 372              	.LASF10:
+ 373 01fa 696E7433 		.ascii	"int32_t\000"
+ 373      325F7400 
+ 374              	.LASF14:
+ 375 0202 73697A65 		.ascii	"sizetype\000"
+ 375      74797065 
+ 375      00
+ 376              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

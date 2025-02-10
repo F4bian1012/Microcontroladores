@@ -189,7 +189,6 @@
 <name v=".\Blinking_LED.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Blinking_LED.cydsn\Blinking_LED.cydwr" />
 <name v=".\Blinking_LED.cydsn\main.c" />
-<name v=".\Blinking_LED.cydsn\Generated_Source\PSoC5\LED.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -197,7 +196,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1980, 904" SelectedTabbedMdiWindow="00f13203-b098-4ab3-a315-f195ccaa1080"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\TopDesign\TopDesign.cysch" Guid="8eee8c34-29b1-4d96-98f2-41062c045e06" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\Blinking_LED.cydwr" Guid="06a1a013-60e4-4037-b040-d0a33eb84460" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\main.c" Guid="00f13203-b098-4ab3-a315-f195ccaa1080" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\Generated_Source\PSoC5\LED.c" Guid="2b2e5ebe-fbcf-4af9-b6e5-7bf4d381b238" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1980, 904" SelectedTabbedMdiWindow="00f13203-b098-4ab3-a315-f195ccaa1080"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\TopDesign\TopDesign.cysch" Guid="8eee8c34-29b1-4d96-98f2-41062c045e06" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\Blinking_LED.cydwr" Guid="06a1a013-60e4-4037-b040-d0a33eb84460" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Blinking_LED\Blinking_LED.cydsn\main.c" Guid="00f13203-b098-4ab3-a315-f195ccaa1080" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

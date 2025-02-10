@@ -1,26 +1,42 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
 #include "project.h"
+/*
+    El siguiente código escribe en la memoria cada que el botón se pulsa
+    una vez la cuenta llega a 10 se reinicia el contador
+    El led indica cada que se reinicia el contador
+*/
+
+#define USED_EEPROM_SECTOR          (1u)
+#define RESET_COUNTER_BYTE          ((USED_EEPROM_SECTOR * CYDEV_EEPROM_SECTOR_SIZE) + 0x00)
+
+#define DEBOUNCE_DELAY_MS           (100u)
 
 int main(void)
-{
-    CyGlobalIntEnable; /* Enable global interrupts. */
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+{   
+    uint8 contador;
+    uint8 lectura = 0;
+    
+    EEPROM_Start();
+    
+    CyGlobalIntEnable; 
+    //EEPROM_ReadByte(Address);
+    contador = EEPROM_ReadByte(RESET_COUNTER_BYTE);    
     for(;;)
     {
-        /* Place your application code here. */
+        if (!Boton_Read()){
+            LED_Write(1u);
+            contador++;
+            //EEPROM_WriteByte(byte, Address);        
+            EEPROM_WriteByte(contador, RESET_COUNTER_BYTE);
+            CyDelay(300u);//Si cambiamos el delay a >100 ms tenemos el efecto rebóte en el botón.
+        }
+
+        lectura = EEPROM_ReadByte(RESET_COUNTER_BYTE);
+        
+        if (lectura==10){
+            contador=0;
+            LED_Write(0u);
+            CyDelay(300u);
+        }
+        
     }
 }
-
-/* [] END OF FILE */

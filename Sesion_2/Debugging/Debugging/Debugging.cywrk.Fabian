@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Debugging\Debugging\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\TopDesign</v>
+<v>Debugging\Debugging\Debugging.cydwr</v>
+<v>Debugging\Debugging\Debugging.cydwr\Pins</v>
+<v>Debugging\Debugging\Debugging.cydwr\Analog</v>
+<v>Debugging\Debugging\Debugging.cydwr\Clocks</v>
+<v>Debugging\Debugging\Debugging.cydwr\Interrupts</v>
+<v>Debugging\Debugging\Debugging.cydwr\DMA</v>
+<v>Debugging\Debugging\Debugging.cydwr\System</v>
+<v>Debugging\Debugging\Debugging.cydwr\Directives</v>
+<v>Debugging\Debugging\Debugging.cydwr\Flash Security</v>
+<v>Debugging\Debugging\Debugging.cydwr\EEPROM</v>
+<v>Debugging\Debugging\Header Files</v>
+<v>Debugging\Debugging\Header Files\cyapicallbacks.h</v>
+<v>Debugging\Debugging\Source Files</v>
+<v>Debugging\Debugging\Source Files\main.c</v>
+<v>Debugging\Debugging\Generated_Source</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\TopDesign</v>
+<v>Debugging\Debugging\Debugging.cydwr</v>
+<v>Debugging\Debugging\Debugging.cydwr\Pins</v>
+<v>Debugging\Debugging\Debugging.cydwr\Analog</v>
+<v>Debugging\Debugging\Debugging.cydwr\Clocks</v>
+<v>Debugging\Debugging\Debugging.cydwr\Interrupts</v>
+<v>Debugging\Debugging\Debugging.cydwr\DMA</v>
+<v>Debugging\Debugging\Debugging.cydwr\System</v>
+<v>Debugging\Debugging\Debugging.cydwr\Directives</v>
+<v>Debugging\Debugging\Debugging.cydwr\Flash Security</v>
+<v>Debugging\Debugging\Debugging.cydwr\EEPROM</v>
+<v>Debugging\Debugging\Header Files</v>
+<v>Debugging\Debugging\Header Files\cyapicallbacks.h</v>
+<v>Debugging\Debugging\Source Files</v>
+<v>Debugging\Debugging\Source Files\main.c</v>
+<v>Debugging\Debugging\Generated_Source</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cy_boot</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevice.h</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\cymetadata.c</v>
+<v>Debugging\Debugging\Generated_Source\PSoC5\project.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\TopDesign</v>
+<v>Debugging\Debugging\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\TopDesign</v>
+<v>Debugging\Debugging\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\CortexM3</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Debugging.elf</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Debugging.hex</v>
+<v>Debugging\Debugging\CortexM3\ARM_GCC_541\Debug\Debugging.map</v>
+<v>Debugging\Debugging\Debugging.gpdsc</v>
+<v>Debugging\Debugging\Debugging.rpt</v>
+<v>Debugging\Debugging\Debugging_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\Debugging.rpt</v>
+<v>Debugging\Debugging\Debugging_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\PSoC 5LP Architecture TRM</v>
+<v>Debugging\Debugging\CY8C58LP Family Datasheet</v>
+<v>Debugging\Debugging\System Reference Guides</v>
+<v>Debugging\Debugging\System Reference Guides\cy_boot_v6_0</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Debugging</v>
+<v>Debugging\Debugging</v>
+<v>Debugging\Debugging\PSoC 5LP Architecture TRM</v>
+<v>Debugging\Debugging\CY8C58LP Family Datasheet</v>
+<v>Debugging\Debugging\System Reference Guides</v>
+<v>Debugging\Debugging\System Reference Guides\cy_boot_v6_0</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Debugging.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Debugging.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1980, 904" SelectedTabbedMdiWindow="a598466a-3f4d-4e98-9702-38b4c963cd6a"><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Debugging\Debugging\Debugging.cydsn\TopDesign\TopDesign.cysch" Guid="c457bdd6-2c6f-488d-824f-3a62734ce0f2" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Debugging\Debugging\Debugging.cydsn\main.c" Guid="a598466a-3f4d-4e98-9702-38b4c963cd6a" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

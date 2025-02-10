@@ -7,6 +7,6 @@ int main(void)
 
     for(;;)
     {
-        
+        //Empty project
     }
 }

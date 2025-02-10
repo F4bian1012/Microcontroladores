@@ -1,6 +1,6 @@
 #include <stdio.h>
 // Syntax type variableName = value;
-int main() {
+void main() {
     printf("Hello World! \n");
     int myNum = 15;            // Integer
     float myFloatNum = 5.99;   // Floating point number
