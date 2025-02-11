@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Debouncer\Debouncer\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Debouncer\Debouncer\TopDesign">
 <ExpandedNodeIds>
 <v>Debouncer</v>
 <v>Debouncer\Debouncer</v>
@@ -171,6 +171,12 @@
 <v>Debouncer\Debouncer\PSoC 5LP Architecture TRM</v>
 <v>Debouncer\Debouncer\CY8C58LP Family Datasheet</v>
 <v>Debouncer\Debouncer\System Reference Guides</v>
+<v>Debouncer\Debouncer\System Reference Guides\cy_boot_v6_0</v>
+<v>Debouncer\Debouncer\cy_clock_v2_20.pdf</v>
+<v>Debouncer\Debouncer\cy_isr_v1_70.pdf</v>
+<v>Debouncer\Debouncer\cy_pins_v2_20</v>
+<v>Debouncer\Debouncer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Debouncer\Debouncer\Debouncer_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Debouncer</v>
@@ -178,6 +184,12 @@
 <v>Debouncer\Debouncer\PSoC 5LP Architecture TRM</v>
 <v>Debouncer\Debouncer\CY8C58LP Family Datasheet</v>
 <v>Debouncer\Debouncer\System Reference Guides</v>
+<v>Debouncer\Debouncer\System Reference Guides\cy_boot_v6_0</v>
+<v>Debouncer\Debouncer\cy_clock_v2_20.pdf</v>
+<v>Debouncer\Debouncer\cy_isr_v1_70.pdf</v>
+<v>Debouncer\Debouncer\cy_pins_v2_20</v>
+<v>Debouncer\Debouncer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Debouncer\Debouncer\Debouncer_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -186,14 +198,16 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Debouncer.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2234, 904" SelectedTabbedMdiWindow="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1623, 904" SelectedTabbedMdiWindow="ad0efe24-f0c6-43e7-9ff6-bac8b4ea4bc7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\TopDesign\TopDesign.cysch" Guid="ad0efe24-f0c6-43e7-9ff6-bac8b4ea4bc7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

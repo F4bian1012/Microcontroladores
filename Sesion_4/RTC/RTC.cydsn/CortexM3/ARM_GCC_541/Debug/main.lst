@@ -1,0 +1,890 @@
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** 
+   3:main.c        **** int main(void)
+   4:main.c        **** {
+  28              		.loc 1 4 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 16
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 00B5     		push	{lr}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 85B0     		sub	sp, sp, #20
+  36              		.cfi_def_cfa_offset 24
+  37              	.LVL0:
+   5:main.c        ****     uint8 tmpVar = 0u;
+   6:main.c        ****     
+   7:main.c        ****     RTC_TIME_DATE Start;
+   8:main.c        **** 
+   9:main.c        ****     /* Fill struct with date and time */
+  10:main.c        ****     Start.Sec = 25;
+  38              		.loc 1 10 0
+  39 0004 1923     		movs	r3, #25
+  40 0006 8DF80430 		strb	r3, [sp, #4]
+  11:main.c        ****     Start.Min = 30u;
+  41              		.loc 1 11 0
+  42 000a 1E23     		movs	r3, #30
+  43 000c 8DF80530 		strb	r3, [sp, #5]
+  12:main.c        ****     Start.Hour = 9u;
+  44              		.loc 1 12 0
+  45 0010 0923     		movs	r3, #9
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 2
+
+
+  46 0012 8DF80630 		strb	r3, [sp, #6]
+  13:main.c        ****     Start.DayOfMonth = 11u;
+  47              		.loc 1 13 0
+  48 0016 0B23     		movs	r3, #11
+  49 0018 8DF80830 		strb	r3, [sp, #8]
+  14:main.c        ****     Start.Month = 2u;
+  50              		.loc 1 14 0
+  51 001c 0223     		movs	r3, #2
+  52 001e 8DF80C30 		strb	r3, [sp, #12]
+  15:main.c        ****     Start.Year = 2025u;
+  53              		.loc 1 15 0
+  54 0022 40F2E973 		movw	r3, #2025
+  55 0026 ADF80E30 		strh	r3, [sp, #14]	@ movhi
+  16:main.c        **** 
+  17:main.c        ****     CyGlobalIntEnable;
+  56              		.loc 1 17 0
+  57              		.syntax unified
+  58              	@ 17 "main.c" 1
+  59 002a 62B6     		CPSIE   i
+  60              	@ 0 "" 2
+  18:main.c        **** 
+  19:main.c        ****     /* Set date and time */
+  20:main.c        ****     RTC_WriteTime(&Start);
+  61              		.loc 1 20 0
+  62              		.thumb
+  63              		.syntax unified
+  64 002c 01A8     		add	r0, sp, #4
+  65 002e FFF7FEFF 		bl	RTC_WriteTime
+  66              	.LVL1:
+  21:main.c        ****     RTC_Stop();
+  67              		.loc 1 21 0
+  68 0032 FFF7FEFF 		bl	RTC_Stop
+  69              	.LVL2:
+  22:main.c        ****     RTC_ReadStatus();
+  70              		.loc 1 22 0
+  71 0036 FFF7FEFF 		bl	RTC_ReadStatus
+  72              	.LVL3:
+  23:main.c        ****     RTC_Start();
+  73              		.loc 1 23 0
+  74 003a FFF7FEFF 		bl	RTC_Start
+  75              	.LVL4:
+  24:main.c        ****     tmpVar = RTC_ReadSecond();
+  76              		.loc 1 24 0
+  77 003e FFF7FEFF 		bl	RTC_ReadSecond
+  78              	.LVL5:
+  79              	.L2:
+  25:main.c        ****     
+  26:main.c        ****     for(;;)
+  27:main.c        ****     {
+  28:main.c        ****         
+  29:main.c        ****         tmpVar = RTC_ReadSecond();
+  80              		.loc 1 29 0
+  81 0042 FFF7FEFF 		bl	RTC_ReadSecond
+  82              	.LVL6:
+  30:main.c        ****         if (tmpVar>30){
+  83              		.loc 1 30 0
+  84 0046 1E28     		cmp	r0, #30
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 3
+
+
+  85 0048 FBD9     		bls	.L2
+  31:main.c        ****         LED_Write(!LED_Read());
+  86              		.loc 1 31 0
+  87 004a FFF7FEFF 		bl	LED_Read
+  88              	.LVL7:
+  89 004e B0FA80F0 		clz	r0, r0
+  90 0052 4009     		lsrs	r0, r0, #5
+  91 0054 FFF7FEFF 		bl	LED_Write
+  92              	.LVL8:
+  93 0058 F3E7     		b	.L2
+  94              		.cfi_endproc
+  95              	.LFE63:
+  96              		.size	main, .-main
+  97 005a 00BF     		.text
+  98              	.Letext0:
+  99              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 100              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 101              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 102              		.file 5 "Generated_Source\\PSoC5/RTC.h"
+ 103              		.file 6 "Generated_Source\\PSoC5/LED.h"
+ 104              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 105              		.section	.debug_info,"",%progbits
+ 106              	.Ldebug_info0:
+ 107 0000 1A020000 		.4byte	0x21a
+ 108 0004 0400     		.2byte	0x4
+ 109 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 110 000a 04       		.byte	0x4
+ 111 000b 01       		.uleb128 0x1
+ 112 000c 56000000 		.4byte	.LASF34
+ 113 0010 0C       		.byte	0xc
+ 114 0011 E3010000 		.4byte	.LASF35
+ 115 0015 8F010000 		.4byte	.LASF36
+ 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 117 001d 00000000 		.4byte	0
+ 118 0021 00000000 		.4byte	.Ldebug_line0
+ 119 0025 02       		.uleb128 0x2
+ 120 0026 01       		.byte	0x1
+ 121 0027 06       		.byte	0x6
+ 122 0028 2C020000 		.4byte	.LASF0
+ 123 002c 02       		.uleb128 0x2
+ 124 002d 01       		.byte	0x1
+ 125 002e 08       		.byte	0x8
+ 126 002f 48000000 		.4byte	.LASF1
+ 127 0033 02       		.uleb128 0x2
+ 128 0034 02       		.byte	0x2
+ 129 0035 05       		.byte	0x5
+ 130 0036 FD010000 		.4byte	.LASF2
+ 131 003a 02       		.uleb128 0x2
+ 132 003b 02       		.byte	0x2
+ 133 003c 07       		.byte	0x7
+ 134 003d F6000000 		.4byte	.LASF3
+ 135 0041 03       		.uleb128 0x3
+ 136 0042 1C000000 		.4byte	.LASF9
+ 137 0046 02       		.byte	0x2
+ 138 0047 3F       		.byte	0x3f
+ 139 0048 4C000000 		.4byte	0x4c
+ 140 004c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 4
+
+
+ 141 004d 04       		.byte	0x4
+ 142 004e 05       		.byte	0x5
+ 143 004f 26000000 		.4byte	.LASF4
+ 144 0053 02       		.uleb128 0x2
+ 145 0054 04       		.byte	0x4
+ 146 0055 07       		.byte	0x7
+ 147 0056 E4000000 		.4byte	.LASF5
+ 148 005a 02       		.uleb128 0x2
+ 149 005b 08       		.byte	0x8
+ 150 005c 05       		.byte	0x5
+ 151 005d D5010000 		.4byte	.LASF6
+ 152 0061 02       		.uleb128 0x2
+ 153 0062 08       		.byte	0x8
+ 154 0063 07       		.byte	0x7
+ 155 0064 69010000 		.4byte	.LASF7
+ 156 0068 04       		.uleb128 0x4
+ 157 0069 04       		.byte	0x4
+ 158 006a 05       		.byte	0x5
+ 159 006b 696E7400 		.ascii	"int\000"
+ 160 006f 02       		.uleb128 0x2
+ 161 0070 04       		.byte	0x4
+ 162 0071 07       		.byte	0x7
+ 163 0072 5C010000 		.4byte	.LASF8
+ 164 0076 03       		.uleb128 0x3
+ 165 0077 C4010000 		.4byte	.LASF10
+ 166 007b 03       		.byte	0x3
+ 167 007c 2C       		.byte	0x2c
+ 168 007d 41000000 		.4byte	0x41
+ 169 0081 05       		.uleb128 0x5
+ 170 0082 07020000 		.4byte	.LASF11
+ 171 0086 04       		.byte	0x4
+ 172 0087 E801     		.2byte	0x1e8
+ 173 0089 2C000000 		.4byte	0x2c
+ 174 008d 05       		.uleb128 0x5
+ 175 008e 48010000 		.4byte	.LASF12
+ 176 0092 04       		.byte	0x4
+ 177 0093 E901     		.2byte	0x1e9
+ 178 0095 3A000000 		.4byte	0x3a
+ 179 0099 02       		.uleb128 0x2
+ 180 009a 04       		.byte	0x4
+ 181 009b 04       		.byte	0x4
+ 182 009c 38000000 		.4byte	.LASF13
+ 183 00a0 02       		.uleb128 0x2
+ 184 00a1 08       		.byte	0x8
+ 185 00a2 04       		.byte	0x4
+ 186 00a3 3C010000 		.4byte	.LASF14
+ 187 00a7 02       		.uleb128 0x2
+ 188 00a8 01       		.byte	0x1
+ 189 00a9 08       		.byte	0x8
+ 190 00aa EA010000 		.4byte	.LASF15
+ 191 00ae 06       		.uleb128 0x6
+ 192 00af 0C       		.byte	0xc
+ 193 00b0 05       		.byte	0x5
+ 194 00b1 30       		.byte	0x30
+ 195 00b2 17010000 		.4byte	0x117
+ 196 00b6 07       		.uleb128 0x7
+ 197 00b7 53656300 		.ascii	"Sec\000"
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 5
+
+
+ 198 00bb 05       		.byte	0x5
+ 199 00bc 32       		.byte	0x32
+ 200 00bd 81000000 		.4byte	0x81
+ 201 00c1 00       		.byte	0
+ 202 00c2 07       		.uleb128 0x7
+ 203 00c3 4D696E00 		.ascii	"Min\000"
+ 204 00c7 05       		.byte	0x5
+ 205 00c8 33       		.byte	0x33
+ 206 00c9 81000000 		.4byte	0x81
+ 207 00cd 01       		.byte	0x1
+ 208 00ce 08       		.uleb128 0x8
+ 209 00cf 0D020000 		.4byte	.LASF16
+ 210 00d3 05       		.byte	0x5
+ 211 00d4 34       		.byte	0x34
+ 212 00d5 81000000 		.4byte	0x81
+ 213 00d9 02       		.byte	0x2
+ 214 00da 08       		.uleb128 0x8
+ 215 00db 38020000 		.4byte	.LASF17
+ 216 00df 05       		.byte	0x5
+ 217 00e0 35       		.byte	0x35
+ 218 00e1 81000000 		.4byte	0x81
+ 219 00e5 03       		.byte	0x3
+ 220 00e6 08       		.uleb128 0x8
+ 221 00e7 00000000 		.4byte	.LASF18
+ 222 00eb 05       		.byte	0x5
+ 223 00ec 36       		.byte	0x36
+ 224 00ed 81000000 		.4byte	0x81
+ 225 00f1 04       		.byte	0x4
+ 226 00f2 08       		.uleb128 0x8
+ 227 00f3 09010000 		.4byte	.LASF19
+ 228 00f7 05       		.byte	0x5
+ 229 00f8 37       		.byte	0x37
+ 230 00f9 8D000000 		.4byte	0x8d
+ 231 00fd 06       		.byte	0x6
+ 232 00fe 08       		.uleb128 0x8
+ 233 00ff 13010000 		.4byte	.LASF20
+ 234 0103 05       		.byte	0x5
+ 235 0104 38       		.byte	0x38
+ 236 0105 81000000 		.4byte	0x81
+ 237 0109 08       		.byte	0x8
+ 238 010a 08       		.uleb128 0x8
+ 239 010b 31010000 		.4byte	.LASF21
+ 240 010f 05       		.byte	0x5
+ 241 0110 39       		.byte	0x39
+ 242 0111 8D000000 		.4byte	0x8d
+ 243 0115 0A       		.byte	0xa
+ 244 0116 00       		.byte	0
+ 245 0117 03       		.uleb128 0x3
+ 246 0118 12020000 		.4byte	.LASF22
+ 247 011c 05       		.byte	0x5
+ 248 011d 3A       		.byte	0x3a
+ 249 011e 22010000 		.4byte	0x122
+ 250 0122 09       		.uleb128 0x9
+ 251 0123 AE000000 		.4byte	0xae
+ 252 0127 02       		.uleb128 0x2
+ 253 0128 04       		.byte	0x4
+ 254 0129 07       		.byte	0x7
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 6
+
+
+ 255 012a CC010000 		.4byte	.LASF23
+ 256 012e 02       		.uleb128 0x2
+ 257 012f 08       		.byte	0x8
+ 258 0130 04       		.byte	0x4
+ 259 0131 20020000 		.4byte	.LASF24
+ 260 0135 0A       		.uleb128 0xa
+ 261 0136 43010000 		.4byte	.LASF37
+ 262 013a 01       		.byte	0x1
+ 263 013b 03       		.byte	0x3
+ 264 013c 68000000 		.4byte	0x68
+ 265 0140 00000000 		.4byte	.LFB63
+ 266 0144 5A000000 		.4byte	.LFE63-.LFB63
+ 267 0148 01       		.uleb128 0x1
+ 268 0149 9C       		.byte	0x9c
+ 269 014a BF010000 		.4byte	0x1bf
+ 270 014e 0B       		.uleb128 0xb
+ 271 014f 15000000 		.4byte	.LASF25
+ 272 0153 01       		.byte	0x1
+ 273 0154 05       		.byte	0x5
+ 274 0155 81000000 		.4byte	0x81
+ 275 0159 00000000 		.4byte	.LLST0
+ 276 015d 0C       		.uleb128 0xc
+ 277 015e 36010000 		.4byte	.LASF26
+ 278 0162 01       		.byte	0x1
+ 279 0163 07       		.byte	0x7
+ 280 0164 17010000 		.4byte	0x117
+ 281 0168 02       		.uleb128 0x2
+ 282 0169 91       		.byte	0x91
+ 283 016a 6C       		.sleb128 -20
+ 284 016b 0D       		.uleb128 0xd
+ 285 016c 32000000 		.4byte	.LVL1
+ 286 0170 D0010000 		.4byte	0x1d0
+ 287 0174 7F010000 		.4byte	0x17f
+ 288 0178 0E       		.uleb128 0xe
+ 289 0179 01       		.uleb128 0x1
+ 290 017a 50       		.byte	0x50
+ 291 017b 02       		.uleb128 0x2
+ 292 017c 91       		.byte	0x91
+ 293 017d 6C       		.sleb128 -20
+ 294 017e 00       		.byte	0
+ 295 017f 0F       		.uleb128 0xf
+ 296 0180 36000000 		.4byte	.LVL2
+ 297 0184 DB010000 		.4byte	0x1db
+ 298 0188 0F       		.uleb128 0xf
+ 299 0189 3A000000 		.4byte	.LVL3
+ 300 018d E6010000 		.4byte	0x1e6
+ 301 0191 0F       		.uleb128 0xf
+ 302 0192 3E000000 		.4byte	.LVL4
+ 303 0196 F1010000 		.4byte	0x1f1
+ 304 019a 0F       		.uleb128 0xf
+ 305 019b 42000000 		.4byte	.LVL5
+ 306 019f FC010000 		.4byte	0x1fc
+ 307 01a3 0F       		.uleb128 0xf
+ 308 01a4 46000000 		.4byte	.LVL6
+ 309 01a8 FC010000 		.4byte	0x1fc
+ 310 01ac 0F       		.uleb128 0xf
+ 311 01ad 4E000000 		.4byte	.LVL7
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 7
+
+
+ 312 01b1 07020000 		.4byte	0x207
+ 313 01b5 0F       		.uleb128 0xf
+ 314 01b6 58000000 		.4byte	.LVL8
+ 315 01ba 12020000 		.4byte	0x212
+ 316 01be 00       		.byte	0
+ 317 01bf 10       		.uleb128 0x10
+ 318 01c0 4F010000 		.4byte	.LASF38
+ 319 01c4 07       		.byte	0x7
+ 320 01c5 1207     		.2byte	0x712
+ 321 01c7 CB010000 		.4byte	0x1cb
+ 322 01cb 09       		.uleb128 0x9
+ 323 01cc 76000000 		.4byte	0x76
+ 324 01d0 11       		.uleb128 0x11
+ 325 01d1 EF010000 		.4byte	.LASF27
+ 326 01d5 EF010000 		.4byte	.LASF27
+ 327 01d9 05       		.byte	0x5
+ 328 01da 54       		.byte	0x54
+ 329 01db 11       		.uleb128 0x11
+ 330 01dc 2F000000 		.4byte	.LASF28
+ 331 01e0 2F000000 		.4byte	.LASF28
+ 332 01e4 05       		.byte	0x5
+ 333 01e5 4D       		.byte	0x4d
+ 334 01e6 11       		.uleb128 0x11
+ 335 01e7 22010000 		.4byte	.LASF29
+ 336 01eb 22010000 		.4byte	.LASF29
+ 337 01ef 05       		.byte	0x5
+ 338 01f0 80       		.byte	0x80
+ 339 01f1 11       		.uleb128 0x11
+ 340 01f2 3E000000 		.4byte	.LASF30
+ 341 01f6 3E000000 		.4byte	.LASF30
+ 342 01fa 05       		.byte	0x5
+ 343 01fb 4C       		.byte	0x4c
+ 344 01fc 11       		.uleb128 0x11
+ 345 01fd 80010000 		.4byte	.LASF31
+ 346 0201 80010000 		.4byte	.LASF31
+ 347 0205 05       		.byte	0x5
+ 348 0206 6A       		.byte	0x6a
+ 349 0207 11       		.uleb128 0x11
+ 350 0208 19010000 		.4byte	.LASF32
+ 351 020c 19010000 		.4byte	.LASF32
+ 352 0210 06       		.byte	0x6
+ 353 0211 29       		.byte	0x29
+ 354 0212 11       		.uleb128 0x11
+ 355 0213 0B000000 		.4byte	.LASF33
+ 356 0217 0B000000 		.4byte	.LASF33
+ 357 021b 06       		.byte	0x6
+ 358 021c 26       		.byte	0x26
+ 359 021d 00       		.byte	0
+ 360              		.section	.debug_abbrev,"",%progbits
+ 361              	.Ldebug_abbrev0:
+ 362 0000 01       		.uleb128 0x1
+ 363 0001 11       		.uleb128 0x11
+ 364 0002 01       		.byte	0x1
+ 365 0003 25       		.uleb128 0x25
+ 366 0004 0E       		.uleb128 0xe
+ 367 0005 13       		.uleb128 0x13
+ 368 0006 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 8
+
+
+ 369 0007 03       		.uleb128 0x3
+ 370 0008 0E       		.uleb128 0xe
+ 371 0009 1B       		.uleb128 0x1b
+ 372 000a 0E       		.uleb128 0xe
+ 373 000b 55       		.uleb128 0x55
+ 374 000c 17       		.uleb128 0x17
+ 375 000d 11       		.uleb128 0x11
+ 376 000e 01       		.uleb128 0x1
+ 377 000f 10       		.uleb128 0x10
+ 378 0010 17       		.uleb128 0x17
+ 379 0011 00       		.byte	0
+ 380 0012 00       		.byte	0
+ 381 0013 02       		.uleb128 0x2
+ 382 0014 24       		.uleb128 0x24
+ 383 0015 00       		.byte	0
+ 384 0016 0B       		.uleb128 0xb
+ 385 0017 0B       		.uleb128 0xb
+ 386 0018 3E       		.uleb128 0x3e
+ 387 0019 0B       		.uleb128 0xb
+ 388 001a 03       		.uleb128 0x3
+ 389 001b 0E       		.uleb128 0xe
+ 390 001c 00       		.byte	0
+ 391 001d 00       		.byte	0
+ 392 001e 03       		.uleb128 0x3
+ 393 001f 16       		.uleb128 0x16
+ 394 0020 00       		.byte	0
+ 395 0021 03       		.uleb128 0x3
+ 396 0022 0E       		.uleb128 0xe
+ 397 0023 3A       		.uleb128 0x3a
+ 398 0024 0B       		.uleb128 0xb
+ 399 0025 3B       		.uleb128 0x3b
+ 400 0026 0B       		.uleb128 0xb
+ 401 0027 49       		.uleb128 0x49
+ 402 0028 13       		.uleb128 0x13
+ 403 0029 00       		.byte	0
+ 404 002a 00       		.byte	0
+ 405 002b 04       		.uleb128 0x4
+ 406 002c 24       		.uleb128 0x24
+ 407 002d 00       		.byte	0
+ 408 002e 0B       		.uleb128 0xb
+ 409 002f 0B       		.uleb128 0xb
+ 410 0030 3E       		.uleb128 0x3e
+ 411 0031 0B       		.uleb128 0xb
+ 412 0032 03       		.uleb128 0x3
+ 413 0033 08       		.uleb128 0x8
+ 414 0034 00       		.byte	0
+ 415 0035 00       		.byte	0
+ 416 0036 05       		.uleb128 0x5
+ 417 0037 16       		.uleb128 0x16
+ 418 0038 00       		.byte	0
+ 419 0039 03       		.uleb128 0x3
+ 420 003a 0E       		.uleb128 0xe
+ 421 003b 3A       		.uleb128 0x3a
+ 422 003c 0B       		.uleb128 0xb
+ 423 003d 3B       		.uleb128 0x3b
+ 424 003e 05       		.uleb128 0x5
+ 425 003f 49       		.uleb128 0x49
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 9
+
+
+ 426 0040 13       		.uleb128 0x13
+ 427 0041 00       		.byte	0
+ 428 0042 00       		.byte	0
+ 429 0043 06       		.uleb128 0x6
+ 430 0044 13       		.uleb128 0x13
+ 431 0045 01       		.byte	0x1
+ 432 0046 0B       		.uleb128 0xb
+ 433 0047 0B       		.uleb128 0xb
+ 434 0048 3A       		.uleb128 0x3a
+ 435 0049 0B       		.uleb128 0xb
+ 436 004a 3B       		.uleb128 0x3b
+ 437 004b 0B       		.uleb128 0xb
+ 438 004c 01       		.uleb128 0x1
+ 439 004d 13       		.uleb128 0x13
+ 440 004e 00       		.byte	0
+ 441 004f 00       		.byte	0
+ 442 0050 07       		.uleb128 0x7
+ 443 0051 0D       		.uleb128 0xd
+ 444 0052 00       		.byte	0
+ 445 0053 03       		.uleb128 0x3
+ 446 0054 08       		.uleb128 0x8
+ 447 0055 3A       		.uleb128 0x3a
+ 448 0056 0B       		.uleb128 0xb
+ 449 0057 3B       		.uleb128 0x3b
+ 450 0058 0B       		.uleb128 0xb
+ 451 0059 49       		.uleb128 0x49
+ 452 005a 13       		.uleb128 0x13
+ 453 005b 38       		.uleb128 0x38
+ 454 005c 0B       		.uleb128 0xb
+ 455 005d 00       		.byte	0
+ 456 005e 00       		.byte	0
+ 457 005f 08       		.uleb128 0x8
+ 458 0060 0D       		.uleb128 0xd
+ 459 0061 00       		.byte	0
+ 460 0062 03       		.uleb128 0x3
+ 461 0063 0E       		.uleb128 0xe
+ 462 0064 3A       		.uleb128 0x3a
+ 463 0065 0B       		.uleb128 0xb
+ 464 0066 3B       		.uleb128 0x3b
+ 465 0067 0B       		.uleb128 0xb
+ 466 0068 49       		.uleb128 0x49
+ 467 0069 13       		.uleb128 0x13
+ 468 006a 38       		.uleb128 0x38
+ 469 006b 0B       		.uleb128 0xb
+ 470 006c 00       		.byte	0
+ 471 006d 00       		.byte	0
+ 472 006e 09       		.uleb128 0x9
+ 473 006f 35       		.uleb128 0x35
+ 474 0070 00       		.byte	0
+ 475 0071 49       		.uleb128 0x49
+ 476 0072 13       		.uleb128 0x13
+ 477 0073 00       		.byte	0
+ 478 0074 00       		.byte	0
+ 479 0075 0A       		.uleb128 0xa
+ 480 0076 2E       		.uleb128 0x2e
+ 481 0077 01       		.byte	0x1
+ 482 0078 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 10
+
+
+ 483 0079 19       		.uleb128 0x19
+ 484 007a 03       		.uleb128 0x3
+ 485 007b 0E       		.uleb128 0xe
+ 486 007c 3A       		.uleb128 0x3a
+ 487 007d 0B       		.uleb128 0xb
+ 488 007e 3B       		.uleb128 0x3b
+ 489 007f 0B       		.uleb128 0xb
+ 490 0080 27       		.uleb128 0x27
+ 491 0081 19       		.uleb128 0x19
+ 492 0082 49       		.uleb128 0x49
+ 493 0083 13       		.uleb128 0x13
+ 494 0084 8701     		.uleb128 0x87
+ 495 0086 19       		.uleb128 0x19
+ 496 0087 11       		.uleb128 0x11
+ 497 0088 01       		.uleb128 0x1
+ 498 0089 12       		.uleb128 0x12
+ 499 008a 06       		.uleb128 0x6
+ 500 008b 40       		.uleb128 0x40
+ 501 008c 18       		.uleb128 0x18
+ 502 008d 9742     		.uleb128 0x2117
+ 503 008f 19       		.uleb128 0x19
+ 504 0090 01       		.uleb128 0x1
+ 505 0091 13       		.uleb128 0x13
+ 506 0092 00       		.byte	0
+ 507 0093 00       		.byte	0
+ 508 0094 0B       		.uleb128 0xb
+ 509 0095 34       		.uleb128 0x34
+ 510 0096 00       		.byte	0
+ 511 0097 03       		.uleb128 0x3
+ 512 0098 0E       		.uleb128 0xe
+ 513 0099 3A       		.uleb128 0x3a
+ 514 009a 0B       		.uleb128 0xb
+ 515 009b 3B       		.uleb128 0x3b
+ 516 009c 0B       		.uleb128 0xb
+ 517 009d 49       		.uleb128 0x49
+ 518 009e 13       		.uleb128 0x13
+ 519 009f 02       		.uleb128 0x2
+ 520 00a0 17       		.uleb128 0x17
+ 521 00a1 00       		.byte	0
+ 522 00a2 00       		.byte	0
+ 523 00a3 0C       		.uleb128 0xc
+ 524 00a4 34       		.uleb128 0x34
+ 525 00a5 00       		.byte	0
+ 526 00a6 03       		.uleb128 0x3
+ 527 00a7 0E       		.uleb128 0xe
+ 528 00a8 3A       		.uleb128 0x3a
+ 529 00a9 0B       		.uleb128 0xb
+ 530 00aa 3B       		.uleb128 0x3b
+ 531 00ab 0B       		.uleb128 0xb
+ 532 00ac 49       		.uleb128 0x49
+ 533 00ad 13       		.uleb128 0x13
+ 534 00ae 02       		.uleb128 0x2
+ 535 00af 18       		.uleb128 0x18
+ 536 00b0 00       		.byte	0
+ 537 00b1 00       		.byte	0
+ 538 00b2 0D       		.uleb128 0xd
+ 539 00b3 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 11
+
+
+ 540 00b6 01       		.byte	0x1
+ 541 00b7 11       		.uleb128 0x11
+ 542 00b8 01       		.uleb128 0x1
+ 543 00b9 31       		.uleb128 0x31
+ 544 00ba 13       		.uleb128 0x13
+ 545 00bb 01       		.uleb128 0x1
+ 546 00bc 13       		.uleb128 0x13
+ 547 00bd 00       		.byte	0
+ 548 00be 00       		.byte	0
+ 549 00bf 0E       		.uleb128 0xe
+ 550 00c0 8A8201   		.uleb128 0x410a
+ 551 00c3 00       		.byte	0
+ 552 00c4 02       		.uleb128 0x2
+ 553 00c5 18       		.uleb128 0x18
+ 554 00c6 9142     		.uleb128 0x2111
+ 555 00c8 18       		.uleb128 0x18
+ 556 00c9 00       		.byte	0
+ 557 00ca 00       		.byte	0
+ 558 00cb 0F       		.uleb128 0xf
+ 559 00cc 898201   		.uleb128 0x4109
+ 560 00cf 00       		.byte	0
+ 561 00d0 11       		.uleb128 0x11
+ 562 00d1 01       		.uleb128 0x1
+ 563 00d2 31       		.uleb128 0x31
+ 564 00d3 13       		.uleb128 0x13
+ 565 00d4 00       		.byte	0
+ 566 00d5 00       		.byte	0
+ 567 00d6 10       		.uleb128 0x10
+ 568 00d7 34       		.uleb128 0x34
+ 569 00d8 00       		.byte	0
+ 570 00d9 03       		.uleb128 0x3
+ 571 00da 0E       		.uleb128 0xe
+ 572 00db 3A       		.uleb128 0x3a
+ 573 00dc 0B       		.uleb128 0xb
+ 574 00dd 3B       		.uleb128 0x3b
+ 575 00de 05       		.uleb128 0x5
+ 576 00df 49       		.uleb128 0x49
+ 577 00e0 13       		.uleb128 0x13
+ 578 00e1 3F       		.uleb128 0x3f
+ 579 00e2 19       		.uleb128 0x19
+ 580 00e3 3C       		.uleb128 0x3c
+ 581 00e4 19       		.uleb128 0x19
+ 582 00e5 00       		.byte	0
+ 583 00e6 00       		.byte	0
+ 584 00e7 11       		.uleb128 0x11
+ 585 00e8 2E       		.uleb128 0x2e
+ 586 00e9 00       		.byte	0
+ 587 00ea 3F       		.uleb128 0x3f
+ 588 00eb 19       		.uleb128 0x19
+ 589 00ec 3C       		.uleb128 0x3c
+ 590 00ed 19       		.uleb128 0x19
+ 591 00ee 6E       		.uleb128 0x6e
+ 592 00ef 0E       		.uleb128 0xe
+ 593 00f0 03       		.uleb128 0x3
+ 594 00f1 0E       		.uleb128 0xe
+ 595 00f2 3A       		.uleb128 0x3a
+ 596 00f3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 12
+
+
+ 597 00f4 3B       		.uleb128 0x3b
+ 598 00f5 0B       		.uleb128 0xb
+ 599 00f6 00       		.byte	0
+ 600 00f7 00       		.byte	0
+ 601 00f8 00       		.byte	0
+ 602              		.section	.debug_loc,"",%progbits
+ 603              	.Ldebug_loc0:
+ 604              	.LLST0:
+ 605 0000 04000000 		.4byte	.LVL0
+ 606 0004 42000000 		.4byte	.LVL5
+ 607 0008 0200     		.2byte	0x2
+ 608 000a 30       		.byte	0x30
+ 609 000b 9F       		.byte	0x9f
+ 610 000c 46000000 		.4byte	.LVL6
+ 611 0010 4D000000 		.4byte	.LVL7-1
+ 612 0014 0100     		.2byte	0x1
+ 613 0016 50       		.byte	0x50
+ 614 0017 00000000 		.4byte	0
+ 615 001b 00000000 		.4byte	0
+ 616              		.section	.debug_aranges,"",%progbits
+ 617 0000 1C000000 		.4byte	0x1c
+ 618 0004 0200     		.2byte	0x2
+ 619 0006 00000000 		.4byte	.Ldebug_info0
+ 620 000a 04       		.byte	0x4
+ 621 000b 00       		.byte	0
+ 622 000c 0000     		.2byte	0
+ 623 000e 0000     		.2byte	0
+ 624 0010 00000000 		.4byte	.LFB63
+ 625 0014 5A000000 		.4byte	.LFE63-.LFB63
+ 626 0018 00000000 		.4byte	0
+ 627 001c 00000000 		.4byte	0
+ 628              		.section	.debug_ranges,"",%progbits
+ 629              	.Ldebug_ranges0:
+ 630 0000 00000000 		.4byte	.LFB63
+ 631 0004 5A000000 		.4byte	.LFE63
+ 632 0008 00000000 		.4byte	0
+ 633 000c 00000000 		.4byte	0
+ 634              		.section	.debug_line,"",%progbits
+ 635              	.Ldebug_line0:
+ 636 0000 80010000 		.section	.debug_str,"MS",%progbits,1
+ 636      02005E01 
+ 636      00000201 
+ 636      FB0E0D00 
+ 636      01010101 
+ 637              	.LASF18:
+ 638 0000 4461794F 		.ascii	"DayOfMonth\000"
+ 638      664D6F6E 
+ 638      746800
+ 639              	.LASF33:
+ 640 000b 4C45445F 		.ascii	"LED_Write\000"
+ 640      57726974 
+ 640      6500
+ 641              	.LASF25:
+ 642 0015 746D7056 		.ascii	"tmpVar\000"
+ 642      617200
+ 643              	.LASF9:
+ 644 001c 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 13
+
+
+ 644      7433325F 
+ 644      7400
+ 645              	.LASF4:
+ 646 0026 6C6F6E67 		.ascii	"long int\000"
+ 646      20696E74 
+ 646      00
+ 647              	.LASF28:
+ 648 002f 5254435F 		.ascii	"RTC_Stop\000"
+ 648      53746F70 
+ 648      00
+ 649              	.LASF13:
+ 650 0038 666C6F61 		.ascii	"float\000"
+ 650      7400
+ 651              	.LASF30:
+ 652 003e 5254435F 		.ascii	"RTC_Start\000"
+ 652      53746172 
+ 652      7400
+ 653              	.LASF1:
+ 654 0048 756E7369 		.ascii	"unsigned char\000"
+ 654      676E6564 
+ 654      20636861 
+ 654      7200
+ 655              	.LASF34:
+ 656 0056 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 656      43313120 
+ 656      352E342E 
+ 656      31203230 
+ 656      31363036 
+ 657 0089 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 657      20726576 
+ 657      6973696F 
+ 657      6E203233 
+ 657      37373135 
+ 658 00bc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 658      66756E63 
+ 658      74696F6E 
+ 658      2D736563 
+ 658      74696F6E 
+ 659              	.LASF5:
+ 660 00e4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 660      20756E73 
+ 660      69676E65 
+ 660      6420696E 
+ 660      7400
+ 661              	.LASF3:
+ 662 00f6 73686F72 		.ascii	"short unsigned int\000"
+ 662      7420756E 
+ 662      7369676E 
+ 662      65642069 
+ 662      6E7400
+ 663              	.LASF19:
+ 664 0109 4461794F 		.ascii	"DayOfYear\000"
+ 664      66596561 
+ 664      7200
+ 665              	.LASF20:
+ 666 0113 4D6F6E74 		.ascii	"Month\000"
+ 666      6800
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 14
+
+
+ 667              	.LASF32:
+ 668 0119 4C45445F 		.ascii	"LED_Read\000"
+ 668      52656164 
+ 668      00
+ 669              	.LASF29:
+ 670 0122 5254435F 		.ascii	"RTC_ReadStatus\000"
+ 670      52656164 
+ 670      53746174 
+ 670      757300
+ 671              	.LASF21:
+ 672 0131 59656172 		.ascii	"Year\000"
+ 672      00
+ 673              	.LASF26:
+ 674 0136 53746172 		.ascii	"Start\000"
+ 674      7400
+ 675              	.LASF14:
+ 676 013c 646F7562 		.ascii	"double\000"
+ 676      6C6500
+ 677              	.LASF37:
+ 678 0143 6D61696E 		.ascii	"main\000"
+ 678      00
+ 679              	.LASF12:
+ 680 0148 75696E74 		.ascii	"uint16\000"
+ 680      313600
+ 681              	.LASF38:
+ 682 014f 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 682      52784275 
+ 682      66666572 
+ 682      00
+ 683              	.LASF8:
+ 684 015c 756E7369 		.ascii	"unsigned int\000"
+ 684      676E6564 
+ 684      20696E74 
+ 684      00
+ 685              	.LASF7:
+ 686 0169 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 686      206C6F6E 
+ 686      6720756E 
+ 686      7369676E 
+ 686      65642069 
+ 687              	.LASF31:
+ 688 0180 5254435F 		.ascii	"RTC_ReadSecond\000"
+ 688      52656164 
+ 688      5365636F 
+ 688      6E6400
+ 689              	.LASF36:
+ 690 018f 433A5C55 		.ascii	"C:\\Users\\Fabian\\Documents\\PSoC Creator\\RTC\\RT"
+ 690      73657273 
+ 690      5C466162 
+ 690      69616E5C 
+ 690      446F6375 
+ 691 01bc 432E6379 		.ascii	"C.cydsn\000"
+ 691      64736E00 
+ 692              	.LASF10:
+ 693 01c4 696E7433 		.ascii	"int32_t\000"
+ 693      325F7400 
+ 694              	.LASF23:
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccsOqBvr.s 			page 15
+
+
+ 695 01cc 73697A65 		.ascii	"sizetype\000"
+ 695      74797065 
+ 695      00
+ 696              	.LASF6:
+ 697 01d5 6C6F6E67 		.ascii	"long long int\000"
+ 697      206C6F6E 
+ 697      6720696E 
+ 697      7400
+ 698              	.LASF35:
+ 699 01e3 6D61696E 		.ascii	"main.c\000"
+ 699      2E6300
+ 700              	.LASF15:
+ 701 01ea 63686172 		.ascii	"char\000"
+ 701      00
+ 702              	.LASF27:
+ 703 01ef 5254435F 		.ascii	"RTC_WriteTime\000"
+ 703      57726974 
+ 703      6554696D 
+ 703      6500
+ 704              	.LASF2:
+ 705 01fd 73686F72 		.ascii	"short int\000"
+ 705      7420696E 
+ 705      7400
+ 706              	.LASF11:
+ 707 0207 75696E74 		.ascii	"uint8\000"
+ 707      3800
+ 708              	.LASF16:
+ 709 020d 486F7572 		.ascii	"Hour\000"
+ 709      00
+ 710              	.LASF22:
+ 711 0212 5254435F 		.ascii	"RTC_TIME_DATE\000"
+ 711      54494D45 
+ 711      5F444154 
+ 711      4500
+ 712              	.LASF24:
+ 713 0220 6C6F6E67 		.ascii	"long double\000"
+ 713      20646F75 
+ 713      626C6500 
+ 714              	.LASF0:
+ 715 022c 7369676E 		.ascii	"signed char\000"
+ 715      65642063 
+ 715      68617200 
+ 716              	.LASF17:
+ 717 0238 4461794F 		.ascii	"DayOfWeek\000"
+ 717      66576565 
+ 717      6B00
+ 718              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

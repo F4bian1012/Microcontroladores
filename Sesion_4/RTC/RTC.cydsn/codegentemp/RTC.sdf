@@ -1,0 +1,21 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2025-02-11T15:27:05Z")
+ (DESIGN "RTC")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.4")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "RTC")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb \\RTC\:isr\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT PM.onepps_int \\RTC\:isr\\.interrupt (5.778:5.778:5.778))
+    (INTERCONNECT LED\(0\)_PAD LED\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

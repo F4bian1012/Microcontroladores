@@ -1,0 +1,6 @@
+C:\Users\Fabian\Documents\PSoC Creator\Contador\Contador.cydsn\Contador.cyprj|b3687524-14bf-4309-b035-a5da4ea7e30f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9912cf25-1248-489c-af29-791adf15425b
+C:\Users\Fabian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|ffc2b84c-d628-4535-aca3-eb72408c5621
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a3f654f7-3364-44cb-a249-cbb8e723039b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|dbfe7162-28e9-491d-92cc-a922f22389b1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|45a78dfd-55ef-42b9-8acc-43e35a88a205
