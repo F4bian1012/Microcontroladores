@@ -1,0 +1,691 @@
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** 
+   3:main.c        **** int main()
+   4:main.c        **** {
+  28              		.loc 1 4 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+   5:main.c        ****     uint8 output;
+   6:main.c        ****     ADC_DelSig_1_Start();
+  36              		.loc 1 6 0
+  37 0002 FFF7FEFF 		bl	ADC_DelSig_1_Start
+  38              	.LVL0:
+   7:main.c        **** 
+   8:main.c        ****     /* Start the ADC conversion */
+   9:main.c        ****     ADC_DelSig_1_StartConvert();
+  39              		.loc 1 9 0
+  40 0006 FFF7FEFF 		bl	ADC_DelSig_1_StartConvert
+  41              	.LVL1:
+  42              	.L3:
+  10:main.c        **** 
+  11:main.c        ****     for(;;)
+  12:main.c        ****     {
+  13:main.c        ****         if(ADC_DelSig_1_IsEndConversion(ADC_DelSig_1_RETURN_STATUS))
+  43              		.loc 1 13 0
+  44 000a 0120     		movs	r0, #1
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 2
+
+
+  45 000c FFF7FEFF 		bl	ADC_DelSig_1_IsEndConversion
+  46              	.LVL2:
+  47 0010 0028     		cmp	r0, #0
+  48 0012 FAD0     		beq	.L3
+  14:main.c        ****         {
+  15:main.c        ****             output = ADC_DelSig_1_GetResult8();
+  49              		.loc 1 15 0
+  50 0014 FFF7FEFF 		bl	ADC_DelSig_1_GetResult8
+  51              	.LVL3:
+  52 0018 C0B2     		uxtb	r0, r0
+  53              	.LVL4:
+  16:main.c        ****             
+  17:main.c        ****             if ( output<127){
+  54              		.loc 1 17 0
+  55 001a 7E28     		cmp	r0, #126
+  56 001c 03D8     		bhi	.L4
+  18:main.c        ****                 LED_Write(1u);}
+  57              		.loc 1 18 0
+  58 001e 0120     		movs	r0, #1
+  59              	.LVL5:
+  60 0020 FFF7FEFF 		bl	LED_Write
+  61              	.LVL6:
+  62 0024 F1E7     		b	.L3
+  63              	.LVL7:
+  64              	.L4:
+  19:main.c        ****             else
+  20:main.c        ****             {
+  21:main.c        ****                 LED_Write(0u);
+  65              		.loc 1 21 0
+  66 0026 0020     		movs	r0, #0
+  67              	.LVL8:
+  68 0028 FFF7FEFF 		bl	LED_Write
+  69              	.LVL9:
+  70 002c EDE7     		b	.L3
+  71              		.cfi_endproc
+  72              	.LFE63:
+  73              		.size	main, .-main
+  74 002e 00BF     		.text
+  75              	.Letext0:
+  76              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  77              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  78              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  79              		.file 5 "Generated_Source\\PSoC5/ADC_DelSig_1.h"
+  80              		.file 6 "Generated_Source\\PSoC5/LED.h"
+  81              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+  82              		.section	.debug_info,"",%progbits
+  83              	.Ldebug_info0:
+  84 0000 6E010000 		.4byte	0x16e
+  85 0004 0400     		.2byte	0x4
+  86 0006 00000000 		.4byte	.Ldebug_abbrev0
+  87 000a 04       		.byte	0x4
+  88 000b 01       		.uleb128 0x1
+  89 000c 4E000000 		.4byte	.LASF22
+  90 0010 0C       		.byte	0xc
+  91 0011 3C000000 		.4byte	.LASF23
+  92 0015 DD010000 		.4byte	.LASF24
+  93 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 3
+
+
+  94 001d 00000000 		.4byte	0
+  95 0021 00000000 		.4byte	.Ldebug_line0
+  96 0025 02       		.uleb128 0x2
+  97 0026 01       		.byte	0x1
+  98 0027 06       		.byte	0x6
+  99 0028 80010000 		.4byte	.LASF0
+ 100 002c 02       		.uleb128 0x2
+ 101 002d 01       		.byte	0x1
+ 102 002e 08       		.byte	0x8
+ 103 002f 2E000000 		.4byte	.LASF1
+ 104 0033 02       		.uleb128 0x2
+ 105 0034 02       		.byte	0x2
+ 106 0035 05       		.byte	0x5
+ 107 0036 C2010000 		.4byte	.LASF2
+ 108 003a 02       		.uleb128 0x2
+ 109 003b 02       		.byte	0x2
+ 110 003c 07       		.byte	0x7
+ 111 003d 27010000 		.4byte	.LASF3
+ 112 0041 03       		.uleb128 0x3
+ 113 0042 98010000 		.4byte	.LASF9
+ 114 0046 02       		.byte	0x2
+ 115 0047 3F       		.byte	0x3f
+ 116 0048 4C000000 		.4byte	0x4c
+ 117 004c 02       		.uleb128 0x2
+ 118 004d 04       		.byte	0x4
+ 119 004e 05       		.byte	0x5
+ 120 004f 63010000 		.4byte	.LASF4
+ 121 0053 02       		.uleb128 0x2
+ 122 0054 04       		.byte	0x4
+ 123 0055 07       		.byte	0x7
+ 124 0056 E6000000 		.4byte	.LASF5
+ 125 005a 02       		.uleb128 0x2
+ 126 005b 08       		.byte	0x8
+ 127 005c 05       		.byte	0x5
+ 128 005d 00000000 		.4byte	.LASF6
+ 129 0061 02       		.uleb128 0x2
+ 130 0062 08       		.byte	0x8
+ 131 0063 07       		.byte	0x7
+ 132 0064 10010000 		.4byte	.LASF7
+ 133 0068 04       		.uleb128 0x4
+ 134 0069 04       		.byte	0x4
+ 135 006a 05       		.byte	0x5
+ 136 006b 696E7400 		.ascii	"int\000"
+ 137 006f 02       		.uleb128 0x2
+ 138 0070 04       		.byte	0x4
+ 139 0071 07       		.byte	0x7
+ 140 0072 21000000 		.4byte	.LASF8
+ 141 0076 03       		.uleb128 0x3
+ 142 0077 CC010000 		.4byte	.LASF10
+ 143 007b 03       		.byte	0x3
+ 144 007c 2C       		.byte	0x2c
+ 145 007d 41000000 		.4byte	0x41
+ 146 0081 05       		.uleb128 0x5
+ 147 0082 48000000 		.4byte	.LASF11
+ 148 0086 04       		.byte	0x4
+ 149 0087 E801     		.2byte	0x1e8
+ 150 0089 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 4
+
+
+ 151 008d 02       		.uleb128 0x2
+ 152 008e 04       		.byte	0x4
+ 153 008f 04       		.byte	0x4
+ 154 0090 A2010000 		.4byte	.LASF12
+ 155 0094 02       		.uleb128 0x2
+ 156 0095 08       		.byte	0x8
+ 157 0096 04       		.byte	0x4
+ 158 0097 6C010000 		.4byte	.LASF13
+ 159 009b 02       		.uleb128 0x2
+ 160 009c 01       		.byte	0x1
+ 161 009d 08       		.byte	0x8
+ 162 009e 5E010000 		.4byte	.LASF14
+ 163 00a2 02       		.uleb128 0x2
+ 164 00a3 08       		.byte	0x8
+ 165 00a4 04       		.byte	0x4
+ 166 00a5 8C010000 		.4byte	.LASF15
+ 167 00a9 02       		.uleb128 0x2
+ 168 00aa 04       		.byte	0x4
+ 169 00ab 07       		.byte	0x7
+ 170 00ac D4010000 		.4byte	.LASF16
+ 171 00b0 06       		.uleb128 0x6
+ 172 00b1 43000000 		.4byte	.LASF25
+ 173 00b5 01       		.byte	0x1
+ 174 00b6 03       		.byte	0x3
+ 175 00b7 68000000 		.4byte	0x68
+ 176 00bb 00000000 		.4byte	.LFB63
+ 177 00bf 2E000000 		.4byte	.LFE63-.LFB63
+ 178 00c3 01       		.uleb128 0x1
+ 179 00c4 9C       		.byte	0x9c
+ 180 00c5 29010000 		.4byte	0x129
+ 181 00c9 07       		.uleb128 0x7
+ 182 00ca 3A010000 		.4byte	.LASF26
+ 183 00ce 01       		.byte	0x1
+ 184 00cf 05       		.byte	0x5
+ 185 00d0 81000000 		.4byte	0x81
+ 186 00d4 00000000 		.4byte	.LLST0
+ 187 00d8 08       		.uleb128 0x8
+ 188 00d9 06000000 		.4byte	.LVL0
+ 189 00dd 3A010000 		.4byte	0x13a
+ 190 00e1 08       		.uleb128 0x8
+ 191 00e2 0A000000 		.4byte	.LVL1
+ 192 00e6 45010000 		.4byte	0x145
+ 193 00ea 09       		.uleb128 0x9
+ 194 00eb 10000000 		.4byte	.LVL2
+ 195 00ef 50010000 		.4byte	0x150
+ 196 00f3 FD000000 		.4byte	0xfd
+ 197 00f7 0A       		.uleb128 0xa
+ 198 00f8 01       		.uleb128 0x1
+ 199 00f9 50       		.byte	0x50
+ 200 00fa 01       		.uleb128 0x1
+ 201 00fb 31       		.byte	0x31
+ 202 00fc 00       		.byte	0
+ 203 00fd 08       		.uleb128 0x8
+ 204 00fe 18000000 		.4byte	.LVL3
+ 205 0102 5B010000 		.4byte	0x15b
+ 206 0106 09       		.uleb128 0x9
+ 207 0107 24000000 		.4byte	.LVL6
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 5
+
+
+ 208 010b 66010000 		.4byte	0x166
+ 209 010f 19010000 		.4byte	0x119
+ 210 0113 0A       		.uleb128 0xa
+ 211 0114 01       		.uleb128 0x1
+ 212 0115 50       		.byte	0x50
+ 213 0116 01       		.uleb128 0x1
+ 214 0117 31       		.byte	0x31
+ 215 0118 00       		.byte	0
+ 216 0119 0B       		.uleb128 0xb
+ 217 011a 2C000000 		.4byte	.LVL9
+ 218 011e 66010000 		.4byte	0x166
+ 219 0122 0A       		.uleb128 0xa
+ 220 0123 01       		.uleb128 0x1
+ 221 0124 50       		.byte	0x50
+ 222 0125 01       		.uleb128 0x1
+ 223 0126 30       		.byte	0x30
+ 224 0127 00       		.byte	0
+ 225 0128 00       		.byte	0
+ 226 0129 0C       		.uleb128 0xc
+ 227 012a 73010000 		.4byte	.LASF27
+ 228 012e 07       		.byte	0x7
+ 229 012f 1207     		.2byte	0x712
+ 230 0131 35010000 		.4byte	0x135
+ 231 0135 0D       		.uleb128 0xd
+ 232 0136 76000000 		.4byte	0x76
+ 233 013a 0E       		.uleb128 0xe
+ 234 013b 0E000000 		.4byte	.LASF17
+ 235 013f 0E000000 		.4byte	.LASF17
+ 236 0143 05       		.byte	0x5
+ 237 0144 3A       		.byte	0x3a
+ 238 0145 0E       		.uleb128 0xe
+ 239 0146 A8010000 		.4byte	.LASF18
+ 240 014a A8010000 		.4byte	.LASF18
+ 241 014e 05       		.byte	0x5
+ 242 014f 3D       		.byte	0x3d
+ 243 0150 0E       		.uleb128 0xe
+ 244 0151 41010000 		.4byte	.LASF19
+ 245 0155 41010000 		.4byte	.LASF19
+ 246 0159 05       		.byte	0x5
+ 247 015a 3F       		.byte	0x3f
+ 248 015b 0E       		.uleb128 0xe
+ 249 015c F8000000 		.4byte	.LASF20
+ 250 0160 F8000000 		.4byte	.LASF20
+ 251 0164 05       		.byte	0x5
+ 252 0165 40       		.byte	0x40
+ 253 0166 0E       		.uleb128 0xe
+ 254 0167 DC000000 		.4byte	.LASF21
+ 255 016b DC000000 		.4byte	.LASF21
+ 256 016f 06       		.byte	0x6
+ 257 0170 26       		.byte	0x26
+ 258 0171 00       		.byte	0
+ 259              		.section	.debug_abbrev,"",%progbits
+ 260              	.Ldebug_abbrev0:
+ 261 0000 01       		.uleb128 0x1
+ 262 0001 11       		.uleb128 0x11
+ 263 0002 01       		.byte	0x1
+ 264 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 6
+
+
+ 265 0004 0E       		.uleb128 0xe
+ 266 0005 13       		.uleb128 0x13
+ 267 0006 0B       		.uleb128 0xb
+ 268 0007 03       		.uleb128 0x3
+ 269 0008 0E       		.uleb128 0xe
+ 270 0009 1B       		.uleb128 0x1b
+ 271 000a 0E       		.uleb128 0xe
+ 272 000b 55       		.uleb128 0x55
+ 273 000c 17       		.uleb128 0x17
+ 274 000d 11       		.uleb128 0x11
+ 275 000e 01       		.uleb128 0x1
+ 276 000f 10       		.uleb128 0x10
+ 277 0010 17       		.uleb128 0x17
+ 278 0011 00       		.byte	0
+ 279 0012 00       		.byte	0
+ 280 0013 02       		.uleb128 0x2
+ 281 0014 24       		.uleb128 0x24
+ 282 0015 00       		.byte	0
+ 283 0016 0B       		.uleb128 0xb
+ 284 0017 0B       		.uleb128 0xb
+ 285 0018 3E       		.uleb128 0x3e
+ 286 0019 0B       		.uleb128 0xb
+ 287 001a 03       		.uleb128 0x3
+ 288 001b 0E       		.uleb128 0xe
+ 289 001c 00       		.byte	0
+ 290 001d 00       		.byte	0
+ 291 001e 03       		.uleb128 0x3
+ 292 001f 16       		.uleb128 0x16
+ 293 0020 00       		.byte	0
+ 294 0021 03       		.uleb128 0x3
+ 295 0022 0E       		.uleb128 0xe
+ 296 0023 3A       		.uleb128 0x3a
+ 297 0024 0B       		.uleb128 0xb
+ 298 0025 3B       		.uleb128 0x3b
+ 299 0026 0B       		.uleb128 0xb
+ 300 0027 49       		.uleb128 0x49
+ 301 0028 13       		.uleb128 0x13
+ 302 0029 00       		.byte	0
+ 303 002a 00       		.byte	0
+ 304 002b 04       		.uleb128 0x4
+ 305 002c 24       		.uleb128 0x24
+ 306 002d 00       		.byte	0
+ 307 002e 0B       		.uleb128 0xb
+ 308 002f 0B       		.uleb128 0xb
+ 309 0030 3E       		.uleb128 0x3e
+ 310 0031 0B       		.uleb128 0xb
+ 311 0032 03       		.uleb128 0x3
+ 312 0033 08       		.uleb128 0x8
+ 313 0034 00       		.byte	0
+ 314 0035 00       		.byte	0
+ 315 0036 05       		.uleb128 0x5
+ 316 0037 16       		.uleb128 0x16
+ 317 0038 00       		.byte	0
+ 318 0039 03       		.uleb128 0x3
+ 319 003a 0E       		.uleb128 0xe
+ 320 003b 3A       		.uleb128 0x3a
+ 321 003c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 7
+
+
+ 322 003d 3B       		.uleb128 0x3b
+ 323 003e 05       		.uleb128 0x5
+ 324 003f 49       		.uleb128 0x49
+ 325 0040 13       		.uleb128 0x13
+ 326 0041 00       		.byte	0
+ 327 0042 00       		.byte	0
+ 328 0043 06       		.uleb128 0x6
+ 329 0044 2E       		.uleb128 0x2e
+ 330 0045 01       		.byte	0x1
+ 331 0046 3F       		.uleb128 0x3f
+ 332 0047 19       		.uleb128 0x19
+ 333 0048 03       		.uleb128 0x3
+ 334 0049 0E       		.uleb128 0xe
+ 335 004a 3A       		.uleb128 0x3a
+ 336 004b 0B       		.uleb128 0xb
+ 337 004c 3B       		.uleb128 0x3b
+ 338 004d 0B       		.uleb128 0xb
+ 339 004e 49       		.uleb128 0x49
+ 340 004f 13       		.uleb128 0x13
+ 341 0050 8701     		.uleb128 0x87
+ 342 0052 19       		.uleb128 0x19
+ 343 0053 11       		.uleb128 0x11
+ 344 0054 01       		.uleb128 0x1
+ 345 0055 12       		.uleb128 0x12
+ 346 0056 06       		.uleb128 0x6
+ 347 0057 40       		.uleb128 0x40
+ 348 0058 18       		.uleb128 0x18
+ 349 0059 9742     		.uleb128 0x2117
+ 350 005b 19       		.uleb128 0x19
+ 351 005c 01       		.uleb128 0x1
+ 352 005d 13       		.uleb128 0x13
+ 353 005e 00       		.byte	0
+ 354 005f 00       		.byte	0
+ 355 0060 07       		.uleb128 0x7
+ 356 0061 34       		.uleb128 0x34
+ 357 0062 00       		.byte	0
+ 358 0063 03       		.uleb128 0x3
+ 359 0064 0E       		.uleb128 0xe
+ 360 0065 3A       		.uleb128 0x3a
+ 361 0066 0B       		.uleb128 0xb
+ 362 0067 3B       		.uleb128 0x3b
+ 363 0068 0B       		.uleb128 0xb
+ 364 0069 49       		.uleb128 0x49
+ 365 006a 13       		.uleb128 0x13
+ 366 006b 02       		.uleb128 0x2
+ 367 006c 17       		.uleb128 0x17
+ 368 006d 00       		.byte	0
+ 369 006e 00       		.byte	0
+ 370 006f 08       		.uleb128 0x8
+ 371 0070 898201   		.uleb128 0x4109
+ 372 0073 00       		.byte	0
+ 373 0074 11       		.uleb128 0x11
+ 374 0075 01       		.uleb128 0x1
+ 375 0076 31       		.uleb128 0x31
+ 376 0077 13       		.uleb128 0x13
+ 377 0078 00       		.byte	0
+ 378 0079 00       		.byte	0
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 8
+
+
+ 379 007a 09       		.uleb128 0x9
+ 380 007b 898201   		.uleb128 0x4109
+ 381 007e 01       		.byte	0x1
+ 382 007f 11       		.uleb128 0x11
+ 383 0080 01       		.uleb128 0x1
+ 384 0081 31       		.uleb128 0x31
+ 385 0082 13       		.uleb128 0x13
+ 386 0083 01       		.uleb128 0x1
+ 387 0084 13       		.uleb128 0x13
+ 388 0085 00       		.byte	0
+ 389 0086 00       		.byte	0
+ 390 0087 0A       		.uleb128 0xa
+ 391 0088 8A8201   		.uleb128 0x410a
+ 392 008b 00       		.byte	0
+ 393 008c 02       		.uleb128 0x2
+ 394 008d 18       		.uleb128 0x18
+ 395 008e 9142     		.uleb128 0x2111
+ 396 0090 18       		.uleb128 0x18
+ 397 0091 00       		.byte	0
+ 398 0092 00       		.byte	0
+ 399 0093 0B       		.uleb128 0xb
+ 400 0094 898201   		.uleb128 0x4109
+ 401 0097 01       		.byte	0x1
+ 402 0098 11       		.uleb128 0x11
+ 403 0099 01       		.uleb128 0x1
+ 404 009a 31       		.uleb128 0x31
+ 405 009b 13       		.uleb128 0x13
+ 406 009c 00       		.byte	0
+ 407 009d 00       		.byte	0
+ 408 009e 0C       		.uleb128 0xc
+ 409 009f 34       		.uleb128 0x34
+ 410 00a0 00       		.byte	0
+ 411 00a1 03       		.uleb128 0x3
+ 412 00a2 0E       		.uleb128 0xe
+ 413 00a3 3A       		.uleb128 0x3a
+ 414 00a4 0B       		.uleb128 0xb
+ 415 00a5 3B       		.uleb128 0x3b
+ 416 00a6 05       		.uleb128 0x5
+ 417 00a7 49       		.uleb128 0x49
+ 418 00a8 13       		.uleb128 0x13
+ 419 00a9 3F       		.uleb128 0x3f
+ 420 00aa 19       		.uleb128 0x19
+ 421 00ab 3C       		.uleb128 0x3c
+ 422 00ac 19       		.uleb128 0x19
+ 423 00ad 00       		.byte	0
+ 424 00ae 00       		.byte	0
+ 425 00af 0D       		.uleb128 0xd
+ 426 00b0 35       		.uleb128 0x35
+ 427 00b1 00       		.byte	0
+ 428 00b2 49       		.uleb128 0x49
+ 429 00b3 13       		.uleb128 0x13
+ 430 00b4 00       		.byte	0
+ 431 00b5 00       		.byte	0
+ 432 00b6 0E       		.uleb128 0xe
+ 433 00b7 2E       		.uleb128 0x2e
+ 434 00b8 00       		.byte	0
+ 435 00b9 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 9
+
+
+ 436 00ba 19       		.uleb128 0x19
+ 437 00bb 3C       		.uleb128 0x3c
+ 438 00bc 19       		.uleb128 0x19
+ 439 00bd 6E       		.uleb128 0x6e
+ 440 00be 0E       		.uleb128 0xe
+ 441 00bf 03       		.uleb128 0x3
+ 442 00c0 0E       		.uleb128 0xe
+ 443 00c1 3A       		.uleb128 0x3a
+ 444 00c2 0B       		.uleb128 0xb
+ 445 00c3 3B       		.uleb128 0x3b
+ 446 00c4 0B       		.uleb128 0xb
+ 447 00c5 00       		.byte	0
+ 448 00c6 00       		.byte	0
+ 449 00c7 00       		.byte	0
+ 450              		.section	.debug_loc,"",%progbits
+ 451              	.Ldebug_loc0:
+ 452              	.LLST0:
+ 453 0000 1A000000 		.4byte	.LVL4
+ 454 0004 20000000 		.4byte	.LVL5
+ 455 0008 0100     		.2byte	0x1
+ 456 000a 50       		.byte	0x50
+ 457 000b 26000000 		.4byte	.LVL7
+ 458 000f 28000000 		.4byte	.LVL8
+ 459 0013 0100     		.2byte	0x1
+ 460 0015 50       		.byte	0x50
+ 461 0016 00000000 		.4byte	0
+ 462 001a 00000000 		.4byte	0
+ 463              		.section	.debug_aranges,"",%progbits
+ 464 0000 1C000000 		.4byte	0x1c
+ 465 0004 0200     		.2byte	0x2
+ 466 0006 00000000 		.4byte	.Ldebug_info0
+ 467 000a 04       		.byte	0x4
+ 468 000b 00       		.byte	0
+ 469 000c 0000     		.2byte	0
+ 470 000e 0000     		.2byte	0
+ 471 0010 00000000 		.4byte	.LFB63
+ 472 0014 2E000000 		.4byte	.LFE63-.LFB63
+ 473 0018 00000000 		.4byte	0
+ 474 001c 00000000 		.4byte	0
+ 475              		.section	.debug_ranges,"",%progbits
+ 476              	.Ldebug_ranges0:
+ 477 0000 00000000 		.4byte	.LFB63
+ 478 0004 2E000000 		.4byte	.LFE63
+ 479 0008 00000000 		.4byte	0
+ 480 000c 00000000 		.4byte	0
+ 481              		.section	.debug_line,"",%progbits
+ 482              	.Ldebug_line0:
+ 483 0000 81010000 		.section	.debug_str,"MS",%progbits,1
+ 483      02006701 
+ 483      00000201 
+ 483      FB0E0D00 
+ 483      01010101 
+ 484              	.LASF6:
+ 485 0000 6C6F6E67 		.ascii	"long long int\000"
+ 485      206C6F6E 
+ 485      6720696E 
+ 485      7400
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 10
+
+
+ 486              	.LASF17:
+ 487 000e 4144435F 		.ascii	"ADC_DelSig_1_Start\000"
+ 487      44656C53 
+ 487      69675F31 
+ 487      5F537461 
+ 487      727400
+ 488              	.LASF8:
+ 489 0021 756E7369 		.ascii	"unsigned int\000"
+ 489      676E6564 
+ 489      20696E74 
+ 489      00
+ 490              	.LASF1:
+ 491 002e 756E7369 		.ascii	"unsigned char\000"
+ 491      676E6564 
+ 491      20636861 
+ 491      7200
+ 492              	.LASF23:
+ 493 003c 6D61696E 		.ascii	"main.c\000"
+ 493      2E6300
+ 494              	.LASF25:
+ 495 0043 6D61696E 		.ascii	"main\000"
+ 495      00
+ 496              	.LASF11:
+ 497 0048 75696E74 		.ascii	"uint8\000"
+ 497      3800
+ 498              	.LASF22:
+ 499 004e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 499      43313120 
+ 499      352E342E 
+ 499      31203230 
+ 499      31363036 
+ 500 0081 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 500      20726576 
+ 500      6973696F 
+ 500      6E203233 
+ 500      37373135 
+ 501 00b4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 501      66756E63 
+ 501      74696F6E 
+ 501      2D736563 
+ 501      74696F6E 
+ 502              	.LASF21:
+ 503 00dc 4C45445F 		.ascii	"LED_Write\000"
+ 503      57726974 
+ 503      6500
+ 504              	.LASF5:
+ 505 00e6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 505      20756E73 
+ 505      69676E65 
+ 505      6420696E 
+ 505      7400
+ 506              	.LASF20:
+ 507 00f8 4144435F 		.ascii	"ADC_DelSig_1_GetResult8\000"
+ 507      44656C53 
+ 507      69675F31 
+ 507      5F476574 
+ 507      52657375 
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 11
+
+
+ 508              	.LASF7:
+ 509 0110 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 509      206C6F6E 
+ 509      6720756E 
+ 509      7369676E 
+ 509      65642069 
+ 510              	.LASF3:
+ 511 0127 73686F72 		.ascii	"short unsigned int\000"
+ 511      7420756E 
+ 511      7369676E 
+ 511      65642069 
+ 511      6E7400
+ 512              	.LASF26:
+ 513 013a 6F757470 		.ascii	"output\000"
+ 513      757400
+ 514              	.LASF19:
+ 515 0141 4144435F 		.ascii	"ADC_DelSig_1_IsEndConversion\000"
+ 515      44656C53 
+ 515      69675F31 
+ 515      5F497345 
+ 515      6E64436F 
+ 516              	.LASF14:
+ 517 015e 63686172 		.ascii	"char\000"
+ 517      00
+ 518              	.LASF4:
+ 519 0163 6C6F6E67 		.ascii	"long int\000"
+ 519      20696E74 
+ 519      00
+ 520              	.LASF13:
+ 521 016c 646F7562 		.ascii	"double\000"
+ 521      6C6500
+ 522              	.LASF27:
+ 523 0173 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 523      52784275 
+ 523      66666572 
+ 523      00
+ 524              	.LASF0:
+ 525 0180 7369676E 		.ascii	"signed char\000"
+ 525      65642063 
+ 525      68617200 
+ 526              	.LASF15:
+ 527 018c 6C6F6E67 		.ascii	"long double\000"
+ 527      20646F75 
+ 527      626C6500 
+ 528              	.LASF9:
+ 529 0198 5F5F696E 		.ascii	"__int32_t\000"
+ 529      7433325F 
+ 529      7400
+ 530              	.LASF12:
+ 531 01a2 666C6F61 		.ascii	"float\000"
+ 531      7400
+ 532              	.LASF18:
+ 533 01a8 4144435F 		.ascii	"ADC_DelSig_1_StartConvert\000"
+ 533      44656C53 
+ 533      69675F31 
+ 533      5F537461 
+ 533      7274436F 
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccoVkxf5.s 			page 12
+
+
+ 534              	.LASF2:
+ 535 01c2 73686F72 		.ascii	"short int\000"
+ 535      7420696E 
+ 535      7400
+ 536              	.LASF10:
+ 537 01cc 696E7433 		.ascii	"int32_t\000"
+ 537      325F7400 
+ 538              	.LASF16:
+ 539 01d4 73697A65 		.ascii	"sizetype\000"
+ 539      74797065 
+ 539      00
+ 540              	.LASF24:
+ 541 01dd 433A5C55 		.ascii	"C:\\Users\\Fabian\\OneDrive - Escuela Tecnologica I"
+ 541      73657273 
+ 541      5C466162 
+ 541      69616E5C 
+ 541      4F6E6544 
+ 542 020d 6E737469 		.ascii	"nstituto Tecnico Central\\A_Microcontroladores\\Mic"
+ 542      7475746F 
+ 542      20546563 
+ 542      6E69636F 
+ 542      2043656E 
+ 543 023e 726F636F 		.ascii	"rocontroladores\\Sesion_5\\ADC\\ADC.cydsn\000"
+ 543      6E74726F 
+ 543      6C61646F 
+ 543      7265735C 
+ 543      53657369 
+ 544              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
