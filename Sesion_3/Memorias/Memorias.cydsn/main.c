@@ -27,7 +27,7 @@ int main(void)
             contador++;
             //EEPROM_WriteByte(byte, Address);        
             EEPROM_WriteByte(contador, RESET_COUNTER_BYTE);
-            CyDelay(300u);//Si cambiamos el delay a >100 ms tenemos el efecto rebóte en el botón.
+            CyDelay(DEBOUNCE_DELAY_MS);//Si cambiamos el delay a >100 ms tenemos el efecto rebóte en el botón.
         }
 
         lectura = EEPROM_ReadByte(RESET_COUNTER_BYTE);
@@ -35,7 +35,7 @@ int main(void)
         if (lectura==10){
             contador=0;
             LED_Write(0u);
-            CyDelay(300u);
+            CyDelay(DEBOUNCE_DELAY_MS);
         }
         
     }

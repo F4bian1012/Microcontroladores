@@ -13,6 +13,7 @@ int main(){
             printf("%d \n", i);
         }
     }
+    system("pause");
     return 0;
 }
 
