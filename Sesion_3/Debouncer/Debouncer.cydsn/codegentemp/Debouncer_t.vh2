@@ -1,5 +1,5 @@
--- Project:   C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Debouncer\Debouncer.cydsn\Debouncer.cyprj
--- Generated: 02/06/2025 11:44:04
+-- Project:   C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\Debouncer.cyprj
+-- Generated: 03/25/2025 10:12:17
 -- PSoC Creator  4.4
 
 ENTITY Debouncer IS

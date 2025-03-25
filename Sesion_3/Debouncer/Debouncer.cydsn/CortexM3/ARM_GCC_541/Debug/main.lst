@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
   46              		.loc 1 9 0
   47 0012 024A     		ldr	r2, .L3
   48 0014 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 2
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 2
 
 
   49 0016 0133     		adds	r3, r3, #1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
   96              		.global	conteo
   97              		.bss
   98              		.align	2
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 3
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 3
 
 
   99              		.set	.LANCHOR0,. + 0
@@ -143,7 +143,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  118 000c 41000000 		.4byte	.LASF22
  119 0010 0C       		.byte	0xc
  120 0011 35000000 		.4byte	.LASF23
- 121 0015 D9000000 		.4byte	.LASF24
+ 121 0015 4D010000 		.4byte	.LASF24
  122 0019 00000000 		.4byte	.Ldebug_ranges0+0
  123 001d 00000000 		.4byte	0
  124 0021 00000000 		.4byte	.Ldebug_line0
@@ -154,7 +154,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  129 002c 02       		.uleb128 0x2
  130 002d 01       		.byte	0x1
  131 002e 08       		.byte	0x8
- 132 002f A0010000 		.4byte	.LASF1
+ 132 002f 1E010000 		.4byte	.LASF1
  133 0033 02       		.uleb128 0x2
  134 0034 02       		.byte	0x2
  135 0035 05       		.byte	0x5
@@ -175,10 +175,10 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  150 0053 02       		.uleb128 0x2
  151 0054 04       		.byte	0x4
  152 0055 07       		.byte	0x7
- 153 0056 CF010000 		.4byte	.LASF5
+ 153 0056 D9000000 		.4byte	.LASF5
  154 005a 02       		.uleb128 0x2
  155 005b 08       		.byte	0x8
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 4
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 4
 
 
  156 005c 05       		.byte	0x5
@@ -186,7 +186,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  158 0061 02       		.uleb128 0x2
  159 0062 08       		.byte	0x8
  160 0063 07       		.byte	0x7
- 161 0064 6D010000 		.4byte	.LASF7
+ 161 0064 EB000000 		.4byte	.LASF7
  162 0068 04       		.uleb128 0x4
  163 0069 04       		.byte	0x4
  164 006a 05       		.byte	0x5
@@ -211,7 +211,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  183 008f 02       		.uleb128 0x2
  184 0090 01       		.byte	0x1
  185 0091 08       		.byte	0x8
- 186 0092 BC010000 		.4byte	.LASF13
+ 186 0092 3A010000 		.4byte	.LASF13
  187 0096 02       		.uleb128 0x2
  188 0097 04       		.byte	0x4
  189 0098 07       		.byte	0x7
@@ -221,7 +221,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  193 009f 04       		.byte	0x4
  194 00a0 0A020000 		.4byte	.LASF15
  195 00a4 05       		.uleb128 0x5
- 196 00a5 AE010000 		.4byte	.LASF25
+ 196 00a5 2C010000 		.4byte	.LASF25
  197 00a9 01       		.byte	0x1
  198 00aa 05       		.byte	0x5
  199 00ab 00000000 		.4byte	.LFB63
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  210 00cb 06       		.uleb128 0x6
  211 00cc 12000000 		.4byte	.LVL2
  212 00d0 3A010000 		.4byte	0x13a
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 5
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 5
 
 
  213 00d4 00       		.byte	0
@@ -279,13 +279,13 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  248 011f 03       		.byte	0x3
  249 0120 00000000 		.4byte	conteo
  250 0124 0D       		.uleb128 0xd
- 251 0125 8D010000 		.4byte	.LASF18
- 252 0129 8D010000 		.4byte	.LASF18
+ 251 0125 0B010000 		.4byte	.LASF18
+ 252 0129 0B010000 		.4byte	.LASF18
  253 012d 05       		.byte	0x5
  254 012e 28       		.byte	0x28
  255 012f 0D       		.uleb128 0xd
- 256 0130 84010000 		.4byte	.LASF19
- 257 0134 84010000 		.4byte	.LASF19
+ 256 0130 02010000 		.4byte	.LASF19
+ 257 0134 02010000 		.4byte	.LASF19
  258 0138 06       		.byte	0x6
  259 0139 29       		.byte	0x29
  260 013a 0D       		.uleb128 0xd
@@ -294,11 +294,11 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  263 0143 06       		.byte	0x6
  264 0144 26       		.byte	0x26
  265 0145 0D       		.uleb128 0xd
- 266 0146 C1010000 		.4byte	.LASF21
- 267 014a C1010000 		.4byte	.LASF21
+ 266 0146 3F010000 		.4byte	.LASF21
+ 267 014a 3F010000 		.4byte	.LASF21
  268 014e 05       		.byte	0x5
  269 014f 18       		.byte	0x18
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 6
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 6
 
 
  270 0150 00       		.byte	0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  324 0033 08       		.uleb128 0x8
  325 0034 00       		.byte	0
  326 0035 00       		.byte	0
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 7
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 7
 
 
  327 0036 05       		.uleb128 0x5
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  381 0070 06       		.uleb128 0x6
  382 0071 40       		.uleb128 0x40
  383 0072 18       		.uleb128 0x18
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 8
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 8
 
 
  384 0073 9742     		.uleb128 0x2117
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  438 00af 0B       		.uleb128 0xb
  439 00b0 3B       		.uleb128 0x3b
  440 00b1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 9
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 9
 
 
  441 00b2 49       		.uleb128 0x49
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  491      01010101 
  492              	.LASF6:
  493 0000 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 10
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 10
 
 
  493      206C6F6E 
@@ -584,66 +584,66 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  509 00cf 4C45445F 		.ascii	"LED_Write\000"
  509      57726974 
  509      6500
- 510              	.LASF24:
- 511 00d9 433A5C55 		.ascii	"C:\\Users\\Fabian\\OneDrive - Escuela Tecnologica I"
- 511      73657273 
- 511      5C466162 
- 511      69616E5C 
- 511      4F6E6544 
- 512 0109 6E737469 		.ascii	"nstituto Tecnico Central\\A_Microcontroladores\\Mic"
- 512      7475746F 
- 512      20546563 
- 512      6E69636F 
- 512      2043656E 
- 513 013a 726F636F 		.ascii	"rocontroladores\\Sesion_2\\Debouncer\\Debouncer.cyd"
- 513      6E74726F 
- 513      6C61646F 
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 11
+ 510              	.LASF5:
+ 511 00d9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 511      20756E73 
+ 511      69676E65 
+ 511      6420696E 
+ 511      7400
+ 512              	.LASF7:
+ 513 00eb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 513      206C6F6E 
+ 513      6720756E 
+ 513      7369676E 
+ 513      65642069 
+ 514              	.LASF19:
+ 515 0102 4C45445F 		.ascii	"LED_Read\000"
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 11
 
 
- 513      7265735C 
- 513      53657369 
- 514 016a 736E00   		.ascii	"sn\000"
- 515              	.LASF7:
- 516 016d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 516      206C6F6E 
- 516      6720756E 
- 516      7369676E 
- 516      65642069 
- 517              	.LASF19:
- 518 0184 4C45445F 		.ascii	"LED_Read\000"
- 518      52656164 
- 518      00
- 519              	.LASF18:
- 520 018d 6973725F 		.ascii	"isr_1_ClearPending\000"
- 520      315F436C 
- 520      65617250 
- 520      656E6469 
- 520      6E6700
- 521              	.LASF1:
- 522 01a0 756E7369 		.ascii	"unsigned char\000"
- 522      676E6564 
- 522      20636861 
- 522      7200
- 523              	.LASF25:
- 524 01ae 6973725F 		.ascii	"isr_1_Handler\000"
- 524      315F4861 
- 524      6E646C65 
- 524      7200
- 525              	.LASF13:
- 526 01bc 63686172 		.ascii	"char\000"
- 526      00
- 527              	.LASF21:
- 528 01c1 6973725F 		.ascii	"isr_1_StartEx\000"
- 528      315F5374 
- 528      61727445 
- 528      7800
- 529              	.LASF5:
- 530 01cf 6C6F6E67 		.ascii	"long unsigned int\000"
- 530      20756E73 
- 530      69676E65 
- 530      6420696E 
- 530      7400
+ 515      52656164 
+ 515      00
+ 516              	.LASF18:
+ 517 010b 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 517      315F436C 
+ 517      65617250 
+ 517      656E6469 
+ 517      6E6700
+ 518              	.LASF1:
+ 519 011e 756E7369 		.ascii	"unsigned char\000"
+ 519      676E6564 
+ 519      20636861 
+ 519      7200
+ 520              	.LASF25:
+ 521 012c 6973725F 		.ascii	"isr_1_Handler\000"
+ 521      315F4861 
+ 521      6E646C65 
+ 521      7200
+ 522              	.LASF13:
+ 523 013a 63686172 		.ascii	"char\000"
+ 523      00
+ 524              	.LASF21:
+ 525 013f 6973725F 		.ascii	"isr_1_StartEx\000"
+ 525      315F5374 
+ 525      61727445 
+ 525      7800
+ 526              	.LASF24:
+ 527 014d 433A5C55 		.ascii	"C:\\Users\\Fabian\\OneDrive - Escuela Tecnologica I"
+ 527      73657273 
+ 527      5C466162 
+ 527      69616E5C 
+ 527      4F6E6544 
+ 528 017d 6E737469 		.ascii	"nstituto Tecnico Central\\A_Microcontroladores\\Mic"
+ 528      7475746F 
+ 528      20546563 
+ 528      6E69636F 
+ 528      2043656E 
+ 529 01ae 726F636F 		.ascii	"rocontroladores\\Sesion_3\\Debouncer\\Debouncer.cyd"
+ 529      6E74726F 
+ 529      6C61646F 
+ 529      7265735C 
+ 529      53657369 
+ 530 01de 736E00   		.ascii	"sn\000"
  531              	.LASF12:
  532 01e1 646F7562 		.ascii	"double\000"
  532      6C6500
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 1
  536      00
  537              	.LASF0:
  538 01fe 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\cc9BNsRz.s 			page 12
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccxZP8Sj.s 			page 12
 
 
  538      65642063 

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Debouncer\Debouncer\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Debouncer\Debouncer\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Debouncer</v>
 <v>Debouncer\Debouncer</v>
@@ -131,30 +131,6 @@
 <VisibleNodeIds>
 <v>Debouncer</v>
 <v>Debouncer\Debouncer</v>
-<v>Debouncer\Debouncer\CortexM3</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\BOTON.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Debouncer.elf</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Debouncer.hex</v>
-<v>Debouncer\Debouncer\CortexM3\ARM_GCC_541\Debug\Debouncer.map</v>
-<v>Debouncer\Debouncer\Debouncer.gpdsc</v>
 <v>Debouncer\Debouncer\Debouncer.rpt</v>
 <v>Debouncer\Debouncer\Debouncer_timing.html</v>
 </VisibleNodeIds>
@@ -200,6 +176,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Debouncer.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Debouncer.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -207,7 +184,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1623, 904" SelectedTabbedMdiWindow="ad0efe24-f0c6-43e7-9ff6-bac8b4ea4bc7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\TopDesign\TopDesign.cysch" Guid="ad0efe24-f0c6-43e7-9ff6-bac8b4ea4bc7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1980, 904" SelectedTabbedMdiWindow="c59b83cc-7c68-4fe5-bd9c-a5b938829e7f"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\TopDesign\TopDesign.cysch" Guid="ad0efe24-f0c6-43e7-9ff6-bac8b4ea4bc7" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\main.c" Guid="c59b83cc-7c68-4fe5-bd9c-a5b938829e7f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

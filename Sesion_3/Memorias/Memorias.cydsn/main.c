@@ -8,7 +8,7 @@
 #define USED_EEPROM_SECTOR          (1u)
 #define RESET_COUNTER_BYTE          ((USED_EEPROM_SECTOR * CYDEV_EEPROM_SECTOR_SIZE) + 0x00)
 
-#define DEBOUNCE_DELAY_MS           (100u)
+#define DEBOUNCE_DELAY_MS           (200u)
 
 int main(void)
 {   
@@ -32,7 +32,7 @@ int main(void)
 
         lectura = EEPROM_ReadByte(RESET_COUNTER_BYTE);
         
-        if (lectura==10){
+        if (lectura>10){
             contador=0;
             LED_Write(0u);
             CyDelay(DEBOUNCE_DELAY_MS);

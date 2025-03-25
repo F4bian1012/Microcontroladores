@@ -1,4 +1,4 @@
---------------- Build Started: 02/06/2025 11:33:06 Project: Interrupciones, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 03/25/2025 10:10:46 Project: Interrupciones, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Interrupciones.a .\CortexM3\ARM_GCC_541\Debug\LED.o .\CortexM3\ARM_GCC_541\Debug\BOTON.o .\CortexM3\ARM_GCC_541\Debug\isr_1.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
@@ -9,6 +9,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Interrupciones\Interrupciones.cydsn\CortexM3\ARM_GCC_541\Debug\Interrupciones.elf"
-Flash used: 1422 of 262144 bytes (0,5 %).
-SRAM used: 2521 of 65536 bytes (3,8 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 02/06/2025 11:33:06 ---------------
+Flash used: 1358 of 262144 bytes (0,5 %).
+SRAM used: 2505 of 65536 bytes (3,8 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 03/25/2025 10:10:46 ---------------

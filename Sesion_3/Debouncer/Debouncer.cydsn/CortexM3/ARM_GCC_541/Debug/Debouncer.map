@@ -940,4 +940,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_2\Debouncer\Debouncer.cydsn\CortexM3\ARM_GCC_541\Debug\Debouncer.elf elf32-littlearm)
+OUTPUT(C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Debouncer\Debouncer.cydsn\CortexM3\ARM_GCC_541\Debug\Debouncer.elf elf32-littlearm)

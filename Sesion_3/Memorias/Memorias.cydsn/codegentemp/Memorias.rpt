@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.069ms
+Loading plugins phase: Elapsed time ==> 0s.081ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Memorias\Memorias.cydsn\Memorias.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Memorias\Memorias.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.393ms
+Elaboration phase: Elapsed time ==> 0s.370ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.007ms
+HDL generation phase: Elapsed time ==> 0s.008ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabia
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Feb 10 16:15:14 2025
+Tue Mar 25 10:13:12 2025
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Memorias.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Feb 10 16:15:14 2025
+Tue Mar 25 10:13:12 2025
 
 
 vpp:  No errors.
@@ -80,7 +80,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabia
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Feb 10 16:15:14 2025
+Tue Mar 25 10:13:12 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -104,7 +104,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabia
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Feb 10 16:15:14 2025
+Tue Mar 25 10:13:12 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -158,14 +158,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Memorias\Memorias.cydsn\Memorias.cyprj" -dcpsoc3 Memorias.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.141ms
+Warp synthesis phase: Elapsed time ==> 0s.143ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 10 February 2025 16:15:14
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 25 March 2025 10:13:12
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_3\Memorias\Memorias.cydsn\Memorias.cyprj -d CY8C5888LTI-LP097 Memorias.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.003ms
+Design parsing phase: Elapsed time ==> 0s.004ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -323,13 +323,13 @@ DAC                           :      :      :      :
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
 Technology Mapping: Elapsed time ==> 0s.004ms
-Tech Mapping phase: Elapsed time ==> 0s.031ms
+Tech Mapping phase: Elapsed time ==> 0s.030ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
 IO_2@[IOP=(2)][IoId=(2)] : Boton(0) (fixed)
 IO_1@[IOP=(2)][IoId=(1)] : LED(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.013ms
+Analog Placement phase: Elapsed time ==> 0s.014ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -347,7 +347,7 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.128ms
+Analog Code Generation phase: Elapsed time ==> 0s.122ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -555,32 +555,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |     Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.300ms
+Digital Placement phase: Elapsed time ==> 0s.306ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Memorias_r.vh2" --pcf-path "Memorias.pco" --des-name "Memorias" --dsf-path "Memorias.dsf" --sdc-path "Memorias.sdc" --lib-path "Memorias_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.468ms
+Digital Routing phase: Elapsed time ==> 0s.465ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.066ms
+Bitstream Generation phase: Elapsed time ==> 0s.084ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
 Bitstream Verification phase: Elapsed time ==> 0s.012ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Memorias_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.094ms
+Static timing analysis phase: Elapsed time ==> 0s.097ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.072ms
+Design database save phase: Elapsed time ==> 0s.075ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 1s.232ms
+cydsfit: Elapsed time ==> 1s.258ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 1s.232ms
-API generation phase: Elapsed time ==> 0s.411ms
+Fitter phase: Elapsed time ==> 1s.258ms
+API generation phase: Elapsed time ==> 0s.502ms
 Dependency generation phase: Elapsed time ==> 0s.004ms
 Cleanup phase: Elapsed time ==> 0s.000ms

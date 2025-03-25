@@ -5,7 +5,7 @@ int conteo=0;
 
 CY_ISR(isr_1_Handler)
 {
-    CyDelay(100);
+    
     LED_Write(~LED_Read());
     BOTON_ClearInterrupt();
     conteo++;

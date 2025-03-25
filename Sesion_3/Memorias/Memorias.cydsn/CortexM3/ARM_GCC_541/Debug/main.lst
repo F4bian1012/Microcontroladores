@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 1
 
 
    1              		.syntax unified
@@ -38,7 +38,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
    8:main.c        **** #define USED_EEPROM_SECTOR          (1u)
    9:main.c        **** #define RESET_COUNTER_BYTE          ((USED_EEPROM_SECTOR * CYDEV_EEPROM_SECTOR_SIZE) + 0x00)
   10:main.c        **** 
-  11:main.c        **** #define DEBOUNCE_DELAY_MS           (100u)
+  11:main.c        **** #define DEBOUNCE_DELAY_MS           (200u)
   12:main.c        **** 
   13:main.c        **** int main(void)
   14:main.c        **** {   
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
   37              		.loc 1 18 0
   38 0002 FFF7FEFF 		bl	EEPROM_Start
   39              	.LVL1:
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 2
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 2
 
 
   19:main.c        ****     
@@ -85,7 +85,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
   54              		.loc 1 25 0
   55 0012 FFF7FEFF 		bl	Boton_Read
   56              	.LVL4:
-  57 0016 68B9     		cbnz	r0, .L2
+  57 0016 60B9     		cbnz	r0, .L2
   26:main.c        ****             LED_Write(1u);
   58              		.loc 1 26 0
   59 0018 0120     		movs	r0, #1
@@ -104,48 +104,48 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
   69 0026 2046     		mov	r0, r4
   70 0028 FFF7FEFF 		bl	EEPROM_WriteByte
   71              	.LVL8:
-  30:main.c        ****             CyDelay(300u);
+  30:main.c        ****             CyDelay(DEBOUNCE_DELAY_MS);//Si cambiamos el delay a >100 ms tenemos el efecto rebóte 
   72              		.loc 1 30 0
-  73 002c 4FF49670 		mov	r0, #300
-  74 0030 FFF7FEFF 		bl	CyDelay
+  73 002c C820     		movs	r0, #200
+  74 002e FFF7FEFF 		bl	CyDelay
   75              	.LVL9:
   76              	.L2:
   31:main.c        ****         }
   32:main.c        **** 
   33:main.c        ****         lectura = EEPROM_ReadByte(RESET_COUNTER_BYTE);
   77              		.loc 1 33 0
-  78 0034 4FF48060 		mov	r0, #1024
-  79 0038 FFF7FEFF 		bl	EEPROM_ReadByte
+  78 0032 4FF48060 		mov	r0, #1024
+  79 0036 FFF7FEFF 		bl	EEPROM_ReadByte
   80              	.LVL10:
   34:main.c        ****         
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 3
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 3
 
 
-  35:main.c        ****         if (lectura==10){
+  35:main.c        ****         if (lectura>10){
   81              		.loc 1 35 0
-  82 003c 0A28     		cmp	r0, #10
-  83 003e E8D1     		bne	.L3
+  82 003a 0A28     		cmp	r0, #10
+  83 003c E9D9     		bls	.L3
   84              	.LVL11:
   36:main.c        ****             contador=0;
   37:main.c        ****             LED_Write(0u);
   85              		.loc 1 37 0
-  86 0040 0020     		movs	r0, #0
+  86 003e 0020     		movs	r0, #0
   87              	.LVL12:
-  88 0042 FFF7FEFF 		bl	LED_Write
+  88 0040 FFF7FEFF 		bl	LED_Write
   89              	.LVL13:
-  38:main.c        ****             CyDelay(300u);
+  38:main.c        ****             CyDelay(DEBOUNCE_DELAY_MS);
   90              		.loc 1 38 0
-  91 0046 4FF49670 		mov	r0, #300
-  92 004a FFF7FEFF 		bl	CyDelay
+  91 0044 C820     		movs	r0, #200
+  92 0046 FFF7FEFF 		bl	CyDelay
   93              	.LVL14:
   36:main.c        ****             contador=0;
   94              		.loc 1 36 0
-  95 004e 0024     		movs	r4, #0
-  96 0050 DFE7     		b	.L3
+  95 004a 0024     		movs	r4, #0
+  96 004c E1E7     		b	.L3
   97              		.cfi_endproc
   98              	.LFE63:
   99              		.size	main, .-main
- 100 0052 00BF     		.text
+ 100 004e 00BF     		.text
  101              	.Letext0:
  102              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  103              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -157,7 +157,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  109              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
  110              		.section	.debug_info,"",%progbits
  111              	.Ldebug_info0:
- 112 0000 DB010000 		.4byte	0x1db
+ 112 0000 D9010000 		.4byte	0x1d9
  113 0004 0400     		.2byte	0x4
  114 0006 00000000 		.4byte	.Ldebug_abbrev0
  115 000a 04       		.byte	0x4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  130 002e 08       		.byte	0x8
  131 002f 26000000 		.4byte	.LASF1
  132 0033 02       		.uleb128 0x2
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 4
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 4
 
 
  133 0034 02       		.byte	0x2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  187 009b 02       		.uleb128 0x2
  188 009c 01       		.byte	0x1
  189 009d 08       		.byte	0x8
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 5
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 5
 
 
  190 009e 1E020000 		.4byte	.LASF14
@@ -256,10 +256,10 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  202 00b6 0D       		.byte	0xd
  203 00b7 68000000 		.4byte	0x68
  204 00bb 00000000 		.4byte	.LFB63
- 205 00bf 52000000 		.4byte	.LFE63-.LFB63
+ 205 00bf 4E000000 		.4byte	.LFE63-.LFB63
  206 00c3 01       		.uleb128 0x1
  207 00c4 9C       		.byte	0x9c
- 208 00c5 8B010000 		.4byte	0x18b
+ 208 00c5 89010000 		.4byte	0x189
  209 00c9 07       		.uleb128 0x7
  210 00ca C2000000 		.4byte	.LASF17
  211 00ce 01       		.byte	0x1
@@ -274,10 +274,10 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  220 00e3 2A000000 		.4byte	.LLST1
  221 00e7 08       		.uleb128 0x8
  222 00e8 06000000 		.4byte	.LVL1
- 223 00ec 9C010000 		.4byte	0x19c
+ 223 00ec 9A010000 		.4byte	0x19a
  224 00f0 09       		.uleb128 0x9
  225 00f1 10000000 		.4byte	.LVL2
- 226 00f5 A7010000 		.4byte	0x1a7
+ 226 00f5 A5010000 		.4byte	0x1a5
  227 00f9 05010000 		.4byte	0x105
  228 00fd 0A       		.uleb128 0xa
  229 00fe 01       		.uleb128 0x1
@@ -288,23 +288,23 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  234 0104 00       		.byte	0
  235 0105 08       		.uleb128 0x8
  236 0106 16000000 		.4byte	.LVL4
- 237 010a B2010000 		.4byte	0x1b2
+ 237 010a B0010000 		.4byte	0x1b0
  238 010e 09       		.uleb128 0x9
  239 010f 1E000000 		.4byte	.LVL5
- 240 0113 BD010000 		.4byte	0x1bd
+ 240 0113 BB010000 		.4byte	0x1bb
  241 0117 21010000 		.4byte	0x121
  242 011b 0A       		.uleb128 0xa
  243 011c 01       		.uleb128 0x1
  244 011d 50       		.byte	0x50
  245 011e 01       		.uleb128 0x1
  246 011f 31       		.byte	0x31
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 6
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 6
 
 
  247 0120 00       		.byte	0
  248 0121 09       		.uleb128 0x9
  249 0122 2C000000 		.4byte	.LVL8
- 250 0126 C8010000 		.4byte	0x1c8
+ 250 0126 C6010000 		.4byte	0x1c6
  251 012a 3C010000 		.4byte	0x13c
  252 012e 0A       		.uleb128 0xa
  253 012f 01       		.uleb128 0x1
@@ -320,89 +320,89 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  263 0139 0004     		.2byte	0x400
  264 013b 00       		.byte	0
  265 013c 09       		.uleb128 0x9
- 266 013d 34000000 		.4byte	.LVL9
- 267 0141 D3010000 		.4byte	0x1d3
- 268 0145 51010000 		.4byte	0x151
+ 266 013d 32000000 		.4byte	.LVL9
+ 267 0141 D1010000 		.4byte	0x1d1
+ 268 0145 50010000 		.4byte	0x150
  269 0149 0A       		.uleb128 0xa
  270 014a 01       		.uleb128 0x1
  271 014b 50       		.byte	0x50
- 272 014c 03       		.uleb128 0x3
- 273 014d 0A       		.byte	0xa
- 274 014e 2C01     		.2byte	0x12c
- 275 0150 00       		.byte	0
- 276 0151 09       		.uleb128 0x9
- 277 0152 3C000000 		.4byte	.LVL10
- 278 0156 A7010000 		.4byte	0x1a7
- 279 015a 66010000 		.4byte	0x166
- 280 015e 0A       		.uleb128 0xa
- 281 015f 01       		.uleb128 0x1
- 282 0160 50       		.byte	0x50
- 283 0161 03       		.uleb128 0x3
- 284 0162 0A       		.byte	0xa
- 285 0163 0004     		.2byte	0x400
- 286 0165 00       		.byte	0
- 287 0166 09       		.uleb128 0x9
- 288 0167 46000000 		.4byte	.LVL13
- 289 016b BD010000 		.4byte	0x1bd
- 290 016f 79010000 		.4byte	0x179
- 291 0173 0A       		.uleb128 0xa
- 292 0174 01       		.uleb128 0x1
- 293 0175 50       		.byte	0x50
- 294 0176 01       		.uleb128 0x1
- 295 0177 30       		.byte	0x30
- 296 0178 00       		.byte	0
- 297 0179 0B       		.uleb128 0xb
- 298 017a 4E000000 		.4byte	.LVL14
- 299 017e D3010000 		.4byte	0x1d3
- 300 0182 0A       		.uleb128 0xa
- 301 0183 01       		.uleb128 0x1
- 302 0184 50       		.byte	0x50
- 303 0185 03       		.uleb128 0x3
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 7
+ 272 014c 02       		.uleb128 0x2
+ 273 014d 08       		.byte	0x8
+ 274 014e C8       		.byte	0xc8
+ 275 014f 00       		.byte	0
+ 276 0150 09       		.uleb128 0x9
+ 277 0151 3A000000 		.4byte	.LVL10
+ 278 0155 A5010000 		.4byte	0x1a5
+ 279 0159 65010000 		.4byte	0x165
+ 280 015d 0A       		.uleb128 0xa
+ 281 015e 01       		.uleb128 0x1
+ 282 015f 50       		.byte	0x50
+ 283 0160 03       		.uleb128 0x3
+ 284 0161 0A       		.byte	0xa
+ 285 0162 0004     		.2byte	0x400
+ 286 0164 00       		.byte	0
+ 287 0165 09       		.uleb128 0x9
+ 288 0166 44000000 		.4byte	.LVL13
+ 289 016a BB010000 		.4byte	0x1bb
+ 290 016e 78010000 		.4byte	0x178
+ 291 0172 0A       		.uleb128 0xa
+ 292 0173 01       		.uleb128 0x1
+ 293 0174 50       		.byte	0x50
+ 294 0175 01       		.uleb128 0x1
+ 295 0176 30       		.byte	0x30
+ 296 0177 00       		.byte	0
+ 297 0178 0B       		.uleb128 0xb
+ 298 0179 4A000000 		.4byte	.LVL14
+ 299 017d D1010000 		.4byte	0x1d1
+ 300 0181 0A       		.uleb128 0xa
+ 301 0182 01       		.uleb128 0x1
+ 302 0183 50       		.byte	0x50
+ 303 0184 02       		.uleb128 0x2
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 7
 
 
- 304 0186 0A       		.byte	0xa
- 305 0187 2C01     		.2byte	0x12c
- 306 0189 00       		.byte	0
- 307 018a 00       		.byte	0
- 308 018b 0C       		.uleb128 0xc
- 309 018c F0000000 		.4byte	.LASF29
- 310 0190 09       		.byte	0x9
- 311 0191 1207     		.2byte	0x712
- 312 0193 97010000 		.4byte	0x197
- 313 0197 0D       		.uleb128 0xd
- 314 0198 76000000 		.4byte	0x76
- 315 019c 0E       		.uleb128 0xe
- 316 019d 31010000 		.4byte	.LASF19
- 317 01a1 31010000 		.4byte	.LASF19
- 318 01a5 05       		.byte	0x5
- 319 01a6 1F       		.byte	0x1f
- 320 01a7 0E       		.uleb128 0xe
- 321 01a8 08010000 		.4byte	.LASF20
- 322 01ac 08010000 		.4byte	.LASF20
- 323 01b0 05       		.byte	0x5
- 324 01b1 23       		.byte	0x23
- 325 01b2 0E       		.uleb128 0xe
- 326 01b3 FD000000 		.4byte	.LASF21
- 327 01b7 FD000000 		.4byte	.LASF21
- 328 01bb 06       		.byte	0x6
- 329 01bc 29       		.byte	0x29
- 330 01bd 0E       		.uleb128 0xe
- 331 01be 00000000 		.4byte	.LASF22
- 332 01c2 00000000 		.4byte	.LASF22
- 333 01c6 07       		.byte	0x7
- 334 01c7 26       		.byte	0x26
- 335 01c8 0E       		.uleb128 0xe
- 336 01c9 55010000 		.4byte	.LASF23
- 337 01cd 55010000 		.4byte	.LASF23
- 338 01d1 05       		.byte	0x5
- 339 01d2 21       		.byte	0x21
- 340 01d3 0E       		.uleb128 0xe
- 341 01d4 50020000 		.4byte	.LASF24
- 342 01d8 50020000 		.4byte	.LASF24
- 343 01dc 08       		.byte	0x8
- 344 01dd 76       		.byte	0x76
- 345 01de 00       		.byte	0
+ 304 0185 08       		.byte	0x8
+ 305 0186 C8       		.byte	0xc8
+ 306 0187 00       		.byte	0
+ 307 0188 00       		.byte	0
+ 308 0189 0C       		.uleb128 0xc
+ 309 018a F0000000 		.4byte	.LASF29
+ 310 018e 09       		.byte	0x9
+ 311 018f 1207     		.2byte	0x712
+ 312 0191 95010000 		.4byte	0x195
+ 313 0195 0D       		.uleb128 0xd
+ 314 0196 76000000 		.4byte	0x76
+ 315 019a 0E       		.uleb128 0xe
+ 316 019b 31010000 		.4byte	.LASF19
+ 317 019f 31010000 		.4byte	.LASF19
+ 318 01a3 05       		.byte	0x5
+ 319 01a4 1F       		.byte	0x1f
+ 320 01a5 0E       		.uleb128 0xe
+ 321 01a6 08010000 		.4byte	.LASF20
+ 322 01aa 08010000 		.4byte	.LASF20
+ 323 01ae 05       		.byte	0x5
+ 324 01af 23       		.byte	0x23
+ 325 01b0 0E       		.uleb128 0xe
+ 326 01b1 FD000000 		.4byte	.LASF21
+ 327 01b5 FD000000 		.4byte	.LASF21
+ 328 01b9 06       		.byte	0x6
+ 329 01ba 29       		.byte	0x29
+ 330 01bb 0E       		.uleb128 0xe
+ 331 01bc 00000000 		.4byte	.LASF22
+ 332 01c0 00000000 		.4byte	.LASF22
+ 333 01c4 07       		.byte	0x7
+ 334 01c5 26       		.byte	0x26
+ 335 01c6 0E       		.uleb128 0xe
+ 336 01c7 55010000 		.4byte	.LASF23
+ 337 01cb 55010000 		.4byte	.LASF23
+ 338 01cf 05       		.byte	0x5
+ 339 01d0 21       		.byte	0x21
+ 340 01d1 0E       		.uleb128 0xe
+ 341 01d2 50020000 		.4byte	.LASF24
+ 342 01d6 50020000 		.4byte	.LASF24
+ 343 01da 08       		.byte	0x8
+ 344 01db 76       		.byte	0x76
+ 345 01dc 00       		.byte	0
  346              		.section	.debug_abbrev,"",%progbits
  347              	.Ldebug_abbrev0:
  348 0000 01       		.uleb128 0x1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  358 000a 0E       		.uleb128 0xe
  359 000b 55       		.uleb128 0x55
  360 000c 17       		.uleb128 0x17
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 8
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 8
 
 
  361 000d 11       		.uleb128 0x11
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  415 0043 06       		.uleb128 0x6
  416 0044 2E       		.uleb128 0x2e
  417 0045 01       		.byte	0x1
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 9
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 9
 
 
  418 0046 3F       		.uleb128 0x3f
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  472 0082 01       		.uleb128 0x1
  473 0083 31       		.uleb128 0x31
  474 0084 13       		.uleb128 0x13
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 10
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 10
 
 
  475 0085 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  529 00c0 0E       		.uleb128 0xe
  530 00c1 03       		.uleb128 0x3
  531 00c2 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 11
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 11
 
 
  532 00c3 3A       		.uleb128 0x3a
@@ -616,11 +616,11 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  544 0008 0100     		.2byte	0x1
  545 000a 54       		.byte	0x54
  546 000b 22000000 		.4byte	.LVL7
- 547 000f 40000000 		.4byte	.LVL11
+ 547 000f 3E000000 		.4byte	.LVL11
  548 0013 0100     		.2byte	0x1
  549 0015 54       		.byte	0x54
- 550 0016 40000000 		.4byte	.LVL11
- 551 001a 52000000 		.4byte	.LFE63
+ 550 0016 3E000000 		.4byte	.LVL11
+ 551 001a 4E000000 		.4byte	.LFE63
  552 001e 0200     		.2byte	0x2
  553 0020 30       		.byte	0x30
  554 0021 9F       		.byte	0x9f
@@ -632,8 +632,8 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  560 0032 0200     		.2byte	0x2
  561 0034 30       		.byte	0x30
  562 0035 9F       		.byte	0x9f
- 563 0036 3C000000 		.4byte	.LVL10
- 564 003a 42000000 		.4byte	.LVL12
+ 563 0036 3A000000 		.4byte	.LVL10
+ 564 003a 40000000 		.4byte	.LVL12
  565 003e 0100     		.2byte	0x1
  566 0040 50       		.byte	0x50
  567 0041 00000000 		.4byte	0
@@ -647,18 +647,18 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  575 000c 0000     		.2byte	0
  576 000e 0000     		.2byte	0
  577 0010 00000000 		.4byte	.LFB63
- 578 0014 52000000 		.4byte	.LFE63-.LFB63
+ 578 0014 4E000000 		.4byte	.LFE63-.LFB63
  579 0018 00000000 		.4byte	0
  580 001c 00000000 		.4byte	0
  581              		.section	.debug_ranges,"",%progbits
  582              	.Ldebug_ranges0:
  583 0000 00000000 		.4byte	.LFB63
- 584 0004 52000000 		.4byte	.LFE63
+ 584 0004 4E000000 		.4byte	.LFE63
  585 0008 00000000 		.4byte	0
  586 000c 00000000 		.4byte	0
  587              		.section	.debug_line,"",%progbits
  588              	.Ldebug_line0:
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 12
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 12
 
 
  589 0000 99010000 		.section	.debug_str,"MS",%progbits,1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  609      7369676E 
  609      65642069 
  609      6E7400
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 13
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 13
 
 
  610              	.LASF29:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 1
  631      6E74726F 
  631      6C61646F 
  631      7265735C 
-ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccMHZofL.s 			page 14
+ARM GAS  C:\Users\Fabian\AppData\Local\Temp\ccyZvPBw.s 			page 14
 
 
  631      53657369 
