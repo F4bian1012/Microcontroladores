@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.071ms
+Loading plugins phase: Elapsed time ==> 0s.087ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.592ms
+Elaboration phase: Elapsed time ==> 0s.601ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.010ms
+HDL generation phase: Elapsed time ==> 0s.011ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.010ms
 ======================================================================
 Compiling:  Timer.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 Timer.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 Timer.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Timer.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 Timer.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 Timer.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Timer.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Feb 11 09:03:18 2025
+Thu Apr 03 09:35:26 2025
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Timer.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Feb 11 09:03:18 2025
+Thu Apr 03 09:35:26 2025
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -79,11 +79,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Timer.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Feb 11 09:03:18 2025
+Thu Apr 03 09:35:27 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -94,9 +94,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\codegentemp\Timer.ctl'.
+Linking 'C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\codegentemp\Timer.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\codegentemp\Timer.v'.
+Linking 'C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\codegentemp\Timer.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 
@@ -106,11 +106,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Timer.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -dcpsoc3 -verilog Timer.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Feb 11 09:03:18 2025
+Thu Apr 03 09:35:27 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -121,9 +121,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\codegentemp\Timer.ctl'.
+Linking 'C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\codegentemp\Timer.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\codegentemp\Timer.v'.
+Linking 'C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\codegentemp\Timer.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
@@ -175,16 +175,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj" -dcpsoc3 Timer.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj" -dcpsoc3 Timer.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.130ms
+Warp synthesis phase: Elapsed time ==> 0s.159ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 11 February 2025 09:03:18
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\Documents\PSoC Creator\Timer\Timer.cydsn\Timer.cyprj -d CY8C5888LTI-LP097 Timer.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Thursday, 03 April 2025 09:35:27
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Timer\Timer.cydsn\Timer.cyprj -d CY8C5888LTI-LP097 Timer.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.003ms
+Design parsing phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -333,13 +333,13 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.004ms
-Tech Mapping phase: Elapsed time ==> 0s.033ms
+Technology Mapping: Elapsed time ==> 0s.003ms
+Tech Mapping phase: Elapsed time ==> 0s.040ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
 IO_1@[IOP=(2)][IoId=(1)] : LED(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.014ms
+Analog Placement phase: Elapsed time ==> 0s.006ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -357,7 +357,7 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.098ms
+Analog Code Generation phase: Elapsed time ==> 0s.105ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -393,7 +393,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.003ms
+Partitioning: Elapsed time ==> 0s.004ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -583,33 +583,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |   Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.300ms
+Digital component placer commit/Report: Elapsed time ==> 0s.002ms
+Digital Placement phase: Elapsed time ==> 0s.325ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Timer_r.vh2" --pcf-path "Timer.pco" --des-name "Timer" --dsf-path "Timer.dsf" --sdc-path "Timer.sdc" --lib-path "Timer_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.478ms
+Digital Routing phase: Elapsed time ==> 0s.505ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.063ms
+Bitstream Generation phase: Elapsed time ==> 0s.082ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.012ms
+Bitstream Verification phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Timer_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.096ms
+Static timing analysis phase: Elapsed time ==> 0s.104ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.076ms
+Design database save phase: Elapsed time ==> 0s.111ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 1s.212ms
+cydsfit: Elapsed time ==> 1s.334ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 1s.212ms
-API generation phase: Elapsed time ==> 0s.289ms
+Fitter phase: Elapsed time ==> 1s.334ms
+API generation phase: Elapsed time ==> 0s.408ms
 Dependency generation phase: Elapsed time ==> 0s.004ms
 Cleanup phase: Elapsed time ==> 0s.000ms

@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\Fabian\Documents\PSoC Creator\Contador\Contador.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\Fabian\Documents\PSoC Creator\Contador\Contador.cydsn\Contador.cyprj
-# Date: Tue, 11 Feb 2025 13:26:00 GMT
+# Component constraints for C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Contador\Contador.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Contador\Contador.cydsn\Contador.cyprj
+# Date: Thu, 03 Apr 2025 14:31:27 GMT

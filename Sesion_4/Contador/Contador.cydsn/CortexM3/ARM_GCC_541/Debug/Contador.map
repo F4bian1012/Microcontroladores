@@ -666,9 +666,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000       0xe8
+.cyconfigecc    0x80000000      0x100
  *(.cyconfigecc)
- .cyconfigecc   0x80000000       0xe8 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x100 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -744,18 +744,18 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3764
+.debug_info     0x00000000     0x37a7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xe4 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x000000e4      0x4a4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00000588      0x134 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x000006bc      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x00000a77      0x325 .\CortexM3\ARM_GCC_541\Debug\Contador.a(Counter_1.o)
- .debug_info    0x00000d9c     0x1374 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyLib.o)
- .debug_info    0x00002110      0xa2a .\CortexM3\ARM_GCC_541\Debug\Contador.a(cyPm.o)
- .debug_info    0x00002b3a       0x8d .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyBootAsmGnu.o)
- .debug_info    0x00002bc7      0x64d .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyFlash.o)
- .debug_info    0x00003214      0x550 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CySpc.o)
+ .debug_info    0x00000588      0x124 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x000006ac      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x00000a67      0x325 .\CortexM3\ARM_GCC_541\Debug\Contador.a(Counter_1.o)
+ .debug_info    0x00000d8c     0x1374 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyLib.o)
+ .debug_info    0x00002100      0xa2a .\CortexM3\ARM_GCC_541\Debug\Contador.a(cyPm.o)
+ .debug_info    0x00002b2a       0xe0 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyBootAsmGnu.o)
+ .debug_info    0x00002c0a      0x64d .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyFlash.o)
+ .debug_info    0x00003257      0x550 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CySpc.o)
 
 .debug_abbrev   0x00000000      0xd32
  *(.debug_abbrev)
@@ -799,26 +799,26 @@ END GROUP
  .debug_frame   0x00000fb4       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x00000fdc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x149a
+.debug_str      0x00000000     0x14ed
  *(.debug_str)
- .debug_str     0x00000000      0x16b .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x1b3 (size before relaxing)
- .debug_str     0x0000016b      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x30c (size before relaxing)
- .debug_str     0x000002f2       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
-                                0x1e1 (size before relaxing)
- .debug_str     0x00000371      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x307 (size before relaxing)
- .debug_str     0x000004b5      0x201 .\CortexM3\ARM_GCC_541\Debug\Contador.a(Counter_1.o)
-                                0x394 (size before relaxing)
- .debug_str     0x000006b6      0x818 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyLib.o)
-                                0xa44 (size before relaxing)
- .debug_str     0x00000ece      0x365 .\CortexM3\ARM_GCC_541\Debug\Contador.a(cyPm.o)
-                                0x730 (size before relaxing)
- .debug_str     0x00001233      0x1bb .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyFlash.o)
-                                0x3bd (size before relaxing)
- .debug_str     0x000013ee       0xac .\CortexM3\ARM_GCC_541\Debug\Contador.a(CySpc.o)
-                                0x335 (size before relaxing)
+ .debug_str     0x00000000      0x1be .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x206 (size before relaxing)
+ .debug_str     0x000001be      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x35f (size before relaxing)
+ .debug_str     0x00000345       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x234 (size before relaxing)
+ .debug_str     0x000003c4      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x35a (size before relaxing)
+ .debug_str     0x00000508      0x201 .\CortexM3\ARM_GCC_541\Debug\Contador.a(Counter_1.o)
+                                0x3e7 (size before relaxing)
+ .debug_str     0x00000709      0x818 .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyLib.o)
+                                0xa97 (size before relaxing)
+ .debug_str     0x00000f21      0x365 .\CortexM3\ARM_GCC_541\Debug\Contador.a(cyPm.o)
+                                0x783 (size before relaxing)
+ .debug_str     0x00001286      0x1bb .\CortexM3\ARM_GCC_541\Debug\Contador.a(CyFlash.o)
+                                0x410 (size before relaxing)
+ .debug_str     0x00001441       0xac .\CortexM3\ARM_GCC_541\Debug\Contador.a(CySpc.o)
+                                0x388 (size before relaxing)
 
 .debug_loc      0x00000000     0x19f8
  *(.debug_loc)
@@ -919,4 +919,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Fabian\Documents\PSoC Creator\Contador\Contador.cydsn\CortexM3\ARM_GCC_541\Debug\Contador.elf elf32-littlearm)
+OUTPUT(C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\Contador\Contador.cydsn\CortexM3\ARM_GCC_541\Debug\Contador.elf elf32-littlearm)

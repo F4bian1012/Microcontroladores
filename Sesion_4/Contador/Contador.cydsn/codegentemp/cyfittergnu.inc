@@ -144,13 +144,13 @@
 .set Counter_1_CounterUDB_sSTSReg_stsreg__1__POS, 1
 .set Counter_1_CounterUDB_sSTSReg_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
 .set Counter_1_CounterUDB_sSTSReg_stsreg__16BIT_STATUS_REG, CYREG_B0_UDB13_14_ST
-.set Counter_1_CounterUDB_sSTSReg_stsreg__3__MASK, 0x08
-.set Counter_1_CounterUDB_sSTSReg_stsreg__3__POS, 3
+.set Counter_1_CounterUDB_sSTSReg_stsreg__2__MASK, 0x04
+.set Counter_1_CounterUDB_sSTSReg_stsreg__2__POS, 2
 .set Counter_1_CounterUDB_sSTSReg_stsreg__5__MASK, 0x20
 .set Counter_1_CounterUDB_sSTSReg_stsreg__5__POS, 5
 .set Counter_1_CounterUDB_sSTSReg_stsreg__6__MASK, 0x40
 .set Counter_1_CounterUDB_sSTSReg_stsreg__6__POS, 6
-.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK, 0x6B
+.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK, 0x67
 .set Counter_1_CounterUDB_sSTSReg_stsreg__MASK_REG, CYREG_B0_UDB13_MSK
 .set Counter_1_CounterUDB_sSTSReg_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
 .set Counter_1_CounterUDB_sSTSReg_stsreg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL

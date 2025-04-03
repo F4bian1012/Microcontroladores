@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PWM\PWM\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PWM\PWM\Generated_Source\PSoC5\PWM_1\PWM_1.c">
 <ExpandedNodeIds>
 <v>PWM</v>
 <v>PWM\PWM</v>
@@ -201,8 +201,6 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\PWM.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\PWM.cydsn\PWM.cydwr" />
-<name v=".\PWM.cydsn\Generated_Source\PSoC5\PWM_1.c" />
 <name v=".\PWM.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
@@ -211,7 +209,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1623, 904" SelectedTabbedMdiWindow="1677c4aa-bd4a-49f1-a3a6-bf0dcd74382e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\Documents\PSoC Creator\PWM\PWM.cydsn\TopDesign\TopDesign.cysch" Guid="1677c4aa-bd4a-49f1-a3a6-bf0dcd74382e" /><DocumentWindow Key="C:\Users\Fabian\Documents\PSoC Creator\PWM\PWM.cydsn\PWM.cydwr" Guid="484d2165-c669-4268-b11b-b14c14baf82f" /><DocumentWindow Key="C:\Users\Fabian\Documents\PSoC Creator\PWM\PWM.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="a1c504e3-3072-4216-b85a-956bc63bf9da" /><DocumentWindow Key="C:\Users\Fabian\Documents\PSoC Creator\PWM\PWM.cydsn\main.c" Guid="17de013c-0993-4387-ba11-b40d14bbe85a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1623, 904" SelectedTabbedMdiWindow="7c4506fc-f2b9-40a0-b058-e78310d62e42"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="1f095a9d-e079-4d1f-bf3d-4b08bc27d0f9" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\PWM\PWM.cydsn\TopDesign\TopDesign.cysch" Guid="7c4506fc-f2b9-40a0-b058-e78310d62e42" /><DocumentWindow Key="C:\Users\Fabian\OneDrive - Escuela Tecnologica Instituto Tecnico Central\A_Microcontroladores\Microcontroladores\Sesion_4\PWM\PWM.cydsn\main.c" Guid="6ceeecfc-4372-42aa-a861-0042aef6fc20" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

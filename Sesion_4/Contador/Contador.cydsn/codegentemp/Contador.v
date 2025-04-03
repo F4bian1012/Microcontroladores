@@ -1,6 +1,6 @@
 // ======================================================================
 // Contador.v generated from TopDesign.cysch
-// 02/11/2025 at 08:26
+// 04/03/2025 at 09:31
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -209,7 +209,7 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v"
 `endif
 
-// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=3, CompareMode=3, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=6, CONTROL3=0, ControlRegRemoved=0, CyGetRegReplacementString=CY_GET_REG8, CySetRegReplacementString=CY_SET_REG8, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InitCounterValue=10, InterruptOnCapture=false, InterruptOnCompare=true, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=10, RegDefReplacementString=reg8, RegSizeReplacementString=uint8, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=false, Resolution=8, RunMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=true, UDBControlReg=true, UseInterrupt=true, VerilogSectionReplacementString=sC8, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Counter_v3_0, CY_CONFIG_TITLE=Counter_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Counter_1, CY_INSTANCE_SHORT_NAME=Counter_1, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Counter_1, )
+// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=0, CompareMode=4, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=6, CONTROL3=0, ControlRegRemoved=0, CyGetRegReplacementString=CY_GET_REG8, CySetRegReplacementString=CY_SET_REG8, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InitCounterValue=0, InterruptOnCapture=false, InterruptOnCompare=false, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=10, RegDefReplacementString=reg8, RegSizeReplacementString=uint8, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=true, Resolution=8, RunMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=true, UDBControlReg=true, UseInterrupt=true, VerilogSectionReplacementString=sC8, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Counter_v3_0, CY_CONFIG_TITLE=Counter_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Counter_1, CY_INSTANCE_SHORT_NAME=Counter_1, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Counter_1, )
 module Counter_v3_0_0 (
     capture,
     clock,
@@ -235,14 +235,14 @@ module Counter_v3_0_0 (
     input       upCnt;
 
     parameter CaptureMode = 0;
-    parameter ClockMode = 3;
-    parameter CompareMode = 3;
+    parameter ClockMode = 0;
+    parameter CompareMode = 4;
     parameter CompareStatusEdgeSense = 1;
     parameter EnableMode = 0;
     parameter ReloadOnCapture = 0;
     parameter ReloadOnCompare = 0;
     parameter ReloadOnOverUnder = 1;
-    parameter ReloadOnReset = 0;
+    parameter ReloadOnReset = 1;
     parameter Resolution = 8;
     parameter RunMode = 0;
     parameter UseInterrupt = 1;
@@ -268,7 +268,7 @@ module Counter_v3_0_0 (
         .z(Net_82));
 
 	// VirtualMux_1 (cy_virtualmux_v1_0)
-	assign Net_89 = Net_95;
+	assign Net_89 = up_ndown;
 
     ZeroTerminal ZeroTerminal_2 (
         .z(Net_95));
@@ -292,14 +292,14 @@ module Counter_v3_0_0 (
         .up_ndown(Net_89),
         .upcnt(upCnt));
     defparam CounterUDB.CaptureMode = 0;
-    defparam CounterUDB.ClockMode = 3;
-    defparam CounterUDB.CompareMode = 3;
+    defparam CounterUDB.ClockMode = 0;
+    defparam CounterUDB.CompareMode = 4;
     defparam CounterUDB.CompareStatusEdgeSense = 1;
     defparam CounterUDB.EnableMode = 0;
     defparam CounterUDB.ReloadOnCapture = 0;
     defparam CounterUDB.ReloadOnCompare = 0;
     defparam CounterUDB.ReloadOnOverUnder = 1;
-    defparam CounterUDB.ReloadOnReset = 0;
+    defparam CounterUDB.ReloadOnReset = 1;
     defparam CounterUDB.Resolution = 8;
     defparam CounterUDB.RunMode = 0;
     defparam CounterUDB.UseInterrupt = 1;
@@ -500,14 +500,14 @@ module top ;
         .up_ndown(1'b1),
         .upCnt(1'b0));
     defparam Counter_1.CaptureMode = 0;
-    defparam Counter_1.ClockMode = 3;
-    defparam Counter_1.CompareMode = 3;
+    defparam Counter_1.ClockMode = 0;
+    defparam Counter_1.CompareMode = 4;
     defparam Counter_1.CompareStatusEdgeSense = 1;
     defparam Counter_1.EnableMode = 0;
     defparam Counter_1.ReloadOnCapture = 0;
     defparam Counter_1.ReloadOnCompare = 0;
     defparam Counter_1.ReloadOnOverUnder = 1;
-    defparam Counter_1.ReloadOnReset = 0;
+    defparam Counter_1.ReloadOnReset = 1;
     defparam Counter_1.Resolution = 8;
     defparam Counter_1.RunMode = 0;
     defparam Counter_1.UseInterrupt = 1;

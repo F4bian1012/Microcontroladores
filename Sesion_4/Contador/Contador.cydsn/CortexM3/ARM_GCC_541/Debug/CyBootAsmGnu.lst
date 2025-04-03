@@ -11447,13 +11447,13 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  144              	.set Counter_1_CounterUDB_sSTSReg_stsreg__1__POS, 1
  145              	.set Counter_1_CounterUDB_sSTSReg_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB13_14_ACTL
  146              	.set Counter_1_CounterUDB_sSTSReg_stsreg__16BIT_STATUS_REG, CYREG_B0_UDB13_14_ST
- 147              	.set Counter_1_CounterUDB_sSTSReg_stsreg__3__MASK, 0x08
- 148              	.set Counter_1_CounterUDB_sSTSReg_stsreg__3__POS, 3
+ 147              	.set Counter_1_CounterUDB_sSTSReg_stsreg__2__MASK, 0x04
+ 148              	.set Counter_1_CounterUDB_sSTSReg_stsreg__2__POS, 2
  149              	.set Counter_1_CounterUDB_sSTSReg_stsreg__5__MASK, 0x20
  150              	.set Counter_1_CounterUDB_sSTSReg_stsreg__5__POS, 5
  151              	.set Counter_1_CounterUDB_sSTSReg_stsreg__6__MASK, 0x40
  152              	.set Counter_1_CounterUDB_sSTSReg_stsreg__6__POS, 6
- 153              	.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK, 0x6B
+ 153              	.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK, 0x67
  154              	.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK_REG, CYREG_B0_UDB13_MSK
  155              	.set Counter_1_CounterUDB_sSTSReg_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
  156              	.set Counter_1_CounterUDB_sSTSReg_stsreg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB13_MSK_ACTL
